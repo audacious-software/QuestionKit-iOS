@@ -10,6 +10,9 @@
 		388224DF21BAE2840054A314 /* QuestionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388224D521BAE2830054A314 /* QuestionKit.framework */; };
 		388224E421BAE2840054A314 /* QuestionKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 388224E321BAE2840054A314 /* QuestionKitTests.m */; };
 		388224E621BAE2840054A314 /* QuestionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 388224D821BAE2830054A314 /* QuestionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388224F121BAE3F90054A314 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 388224F021BAE3F90054A314 /* README.md */; };
+		388224F321BAE4760054A314 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 388224F221BAE4750054A314 /* .travis.yml */; };
+		388224F521BAE47F0054A314 /* .oclint in Resources */ = {isa = PBXBuildFile; fileRef = 388224F421BAE47F0054A314 /* .oclint */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		388224DE21BAE2840054A314 /* QuestionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		388224E321BAE2840054A314 /* QuestionKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionKitTests.m; sourceTree = "<group>"; };
 		388224E521BAE2840054A314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		388224F021BAE3F90054A314 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		388224F221BAE4750054A314 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = SOURCE_ROOT; };
+		388224F421BAE47F0054A314 /* .oclint */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .oclint; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 			children = (
 				388224D821BAE2830054A314 /* QuestionKit.h */,
 				388224D921BAE2830054A314 /* Info.plist */,
+				388224EF21BAE3EC0054A314 /* Resources */,
 			);
 			path = QuestionKit;
 			sourceTree = "<group>";
@@ -84,6 +91,16 @@
 				388224E521BAE2840054A314 /* Info.plist */,
 			);
 			path = QuestionKitTests;
+			sourceTree = "<group>";
+		};
+		388224EF21BAE3EC0054A314 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				388224F221BAE4750054A314 /* .travis.yml */,
+				388224F021BAE3F90054A314 /* README.md */,
+				388224F421BAE47F0054A314 /* .oclint */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +193,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				388224F521BAE47F0054A314 /* .oclint in Resources */,
+				388224F321BAE4760054A314 /* .travis.yml in Resources */,
+				388224F121BAE3F90054A314 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
