@@ -1,0 +1,6 @@
+[submodule "QuestionKit/Third Party/BEMCheckBox"]
+	path = QuestionKit/Third Party/BEMCheckBox
+	url = https://github.com/Boris-Em/BEMCheckBox.git
+[submodule "QuestionKit/Third Party/FSCalendar"]
+	path = QuestionKit/Third Party/FSCalendar
+	url = https://github.com/WenchaoD/FSCalendar.git

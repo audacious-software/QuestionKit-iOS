@@ -1,0 +1,3 @@
+framework module QuestionKit {
+    umbrella header "QuestionKit-Shared.h"
+}
