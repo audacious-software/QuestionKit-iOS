@@ -10,67 +10,63 @@
 		388224DF21BAE2840054A314 /* QuestionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388224D521BAE2830054A314 /* QuestionKit.framework */; };
 		388224E421BAE2840054A314 /* QuestionKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 388224E321BAE2840054A314 /* QuestionKitTests.m */; };
 		388224E621BAE2840054A314 /* QuestionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 388224D821BAE2830054A314 /* QuestionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388224FD21BAE64A0054A314 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 388224FC21BAE64A0054A314 /* README.md */; };
-		388224FF21BAE6600054A314 /* .oclint in Resources */ = {isa = PBXBuildFile; fileRef = 388224FE21BAE6600054A314 /* .oclint */; };
-		3882250121BAE66B0054A314 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3882250021BAE66B0054A314 /* .travis.yml */; };
-		3882250A21BAE70B0054A314 /* DateRangePickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882250621BAE70B0054A314 /* DateRangePickerViewController.h */; };
+		3882250A21BAE70B0054A314 /* DateRangePickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882250621BAE70B0054A314 /* DateRangePickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882250B21BAE70B0054A314 /* DateRangePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882250721BAE70B0054A314 /* DateRangePickerViewController.m */; };
-		3882250C21BAE70B0054A314 /* QuestionsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882250821BAE70B0054A314 /* QuestionsViewController.h */; };
+		3882250C21BAE70B0054A314 /* QuestionsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882250821BAE70B0054A314 /* QuestionsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882250D21BAE70B0054A314 /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882250921BAE70B0054A314 /* QuestionsViewController.m */; };
-		3882251C21BAE7140054A314 /* SingleLineTextCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882250E21BAE7140054A314 /* SingleLineTextCardView.h */; };
+		3882251C21BAE7140054A314 /* SingleLineTextCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882250E21BAE7140054A314 /* SingleLineTextCardView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882251D21BAE7140054A314 /* SelectMultipleChoicesCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882250F21BAE7140054A314 /* SelectMultipleChoicesCardView.m */; };
-		3882251E21BAE7140054A314 /* SelectMultipleChoicesCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251021BAE7140054A314 /* SelectMultipleChoicesCardView.h */; };
+		3882251E21BAE7140054A314 /* SelectMultipleChoicesCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251021BAE7140054A314 /* SelectMultipleChoicesCardView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882251F21BAE7140054A314 /* MultiLineTextCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882251121BAE7140054A314 /* MultiLineTextCardView.m */; };
 		3882252021BAE7140054A314 /* SelectOneCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882251221BAE7140054A314 /* SelectOneCardView.m */; };
-		3882252121BAE7140054A314 /* PromptView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251321BAE7140054A314 /* PromptView.h */; };
+		3882252121BAE7140054A314 /* PromptView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251321BAE7140054A314 /* PromptView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882252221BAE7140054A314 /* PromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882251421BAE7140054A314 /* PromptView.m */; };
-		3882252321BAE7140054A314 /* SelectOneCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251521BAE7140054A314 /* SelectOneCardView.h */; };
+		3882252321BAE7140054A314 /* SelectOneCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251521BAE7140054A314 /* SelectOneCardView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882252421BAE7140054A314 /* SingleLineTextCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882251621BAE7140054A314 /* SingleLineTextCardView.m */; };
-		3882252521BAE7140054A314 /* MultiLineTextCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251721BAE7140054A314 /* MultiLineTextCardView.h */; };
+		3882252521BAE7140054A314 /* MultiLineTextCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251721BAE7140054A314 /* MultiLineTextCardView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882252621BAE7140054A314 /* DateRangeCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882251821BAE7140054A314 /* DateRangeCardView.m */; };
-		3882252721BAE7140054A314 /* PhotoCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251921BAE7140054A314 /* PhotoCard.h */; };
+		3882252721BAE7140054A314 /* PhotoCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251921BAE7140054A314 /* PhotoCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882252821BAE7140054A314 /* PhotoCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882251A21BAE7140054A314 /* PhotoCard.m */; };
-		3882252921BAE7140054A314 /* DateRangeCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251B21BAE7140054A314 /* DateRangeCardView.h */; };
+		3882252921BAE7140054A314 /* DateRangeCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251B21BAE7140054A314 /* DateRangeCardView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882253C21BAFA340054A314 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882253421BAFA340054A314 /* BEMPathManager.m */; };
-		3882253D21BAFA340054A314 /* BEMCheckBoxGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882253521BAFA340054A314 /* BEMCheckBoxGroup.h */; };
-		3882253E21BAFA340054A314 /* BEMPathManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882253621BAFA340054A314 /* BEMPathManager.h */; };
+		3882253D21BAFA340054A314 /* BEMCheckBoxGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882253521BAFA340054A314 /* BEMCheckBoxGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3882253E21BAFA340054A314 /* BEMPathManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882253621BAFA340054A314 /* BEMPathManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882253F21BAFA340054A314 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882253721BAFA340054A314 /* BEMCheckBoxGroup.m */; };
 		3882254021BAFA340054A314 /* BEMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882253821BAFA340054A314 /* BEMCheckBox.m */; };
-		3882254121BAFA340054A314 /* BEMAnimationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882253921BAFA340054A314 /* BEMAnimationManager.h */; };
-		3882254221BAFA340054A314 /* BEMCheckBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882253A21BAFA340054A314 /* BEMCheckBox.h */; };
+		3882254121BAFA340054A314 /* BEMAnimationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882253921BAFA340054A314 /* BEMAnimationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3882254221BAFA340054A314 /* BEMCheckBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882253A21BAFA340054A314 /* BEMCheckBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882254321BAFA340054A314 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882253B21BAFA340054A314 /* BEMAnimationManager.m */; };
 		3882256521BAFAAE0054A314 /* FSCalendarCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882254521BAFAAD0054A314 /* FSCalendarCollectionViewLayout.m */; };
-		3882256621BAFAAE0054A314 /* FSCalendarDelegationFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882254621BAFAAD0054A314 /* FSCalendarDelegationFactory.h */; };
+		3882256621BAFAAE0054A314 /* FSCalendarDelegationFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882254621BAFAAD0054A314 /* FSCalendarDelegationFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882256721BAFAAE0054A314 /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882254721BAFAAD0054A314 /* FSCalendar.m */; };
 		3882256821BAFAAE0054A314 /* FSCalendarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882254821BAFAAD0054A314 /* FSCalendarCalculator.m */; };
 		3882256921BAFAAE0054A314 /* FSCalendarDelegationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882254921BAFAAD0054A314 /* FSCalendarDelegationProxy.m */; };
-		3882256A21BAFAAE0054A314 /* FSCalendarWeekdayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882254A21BAFAAD0054A314 /* FSCalendarWeekdayView.h */; };
+		3882256A21BAFAAE0054A314 /* FSCalendarWeekdayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882254A21BAFAAD0054A314 /* FSCalendarWeekdayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882256B21BAFAAE0054A314 /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882254B21BAFAAD0054A314 /* FSCalendarWeekdayView.m */; };
-		3882256C21BAFAAE0054A314 /* FSCalendarCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882254C21BAFAAD0054A314 /* FSCalendarCalculator.h */; };
-		3882256D21BAFAAE0054A314 /* FSCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882254D21BAFAAD0054A314 /* FSCalendar.h */; };
-		3882256E21BAFAAE0054A314 /* FSCalendarHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882254E21BAFAAD0054A314 /* FSCalendarHeaderView.h */; };
+		3882256C21BAFAAE0054A314 /* FSCalendarCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882254C21BAFAAD0054A314 /* FSCalendarCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3882256D21BAFAAE0054A314 /* FSCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882254D21BAFAAD0054A314 /* FSCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3882256E21BAFAAE0054A314 /* FSCalendarHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882254E21BAFAAD0054A314 /* FSCalendarHeaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882256F21BAFAAE0054A314 /* FSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882254F21BAFAAD0054A314 /* FSCalendarAppearance.m */; };
 		3882257021BAFAAE0054A314 /* FSCalendarSeparatorDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882255021BAFAAD0054A314 /* FSCalendarSeparatorDecorationView.m */; };
-		3882257121BAFAAE0054A314 /* FSCalendarTransitionCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255121BAFAAD0054A314 /* FSCalendarTransitionCoordinator.h */; };
+		3882257121BAFAAE0054A314 /* FSCalendarTransitionCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255121BAFAAD0054A314 /* FSCalendarTransitionCoordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882257221BAFAAE0054A314 /* FSCalendarConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882255221BAFAAD0054A314 /* FSCalendarConstants.m */; };
 		3882257321BAFAAE0054A314 /* FSCalendarDelegationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882255321BAFAAD0054A314 /* FSCalendarDelegationFactory.m */; };
-		3882257421BAFAAE0054A314 /* FSCalendarConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255421BAFAAD0054A314 /* FSCalendarConstants.h */; };
+		3882257421BAFAAE0054A314 /* FSCalendarConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255421BAFAAD0054A314 /* FSCalendarConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882257521BAFAAE0054A314 /* FSCalendarExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882255521BAFAAD0054A314 /* FSCalendarExtensions.m */; };
 		3882257621BAFAAE0054A314 /* FSCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882255621BAFAAD0054A314 /* FSCalendarHeaderView.m */; };
-		3882257721BAFAAE0054A314 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3882255721BAFAAD0054A314 /* Info.plist */; };
 		3882257821BAFAAE0054A314 /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882255821BAFAAD0054A314 /* FSCalendarTransitionCoordinator.m */; };
-		3882257921BAFAAE0054A314 /* FSCalendarCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255921BAFAAD0054A314 /* FSCalendarCollectionViewLayout.h */; };
-		3882257A21BAFAAE0054A314 /* FSCalendarDynamicHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255A21BAFAAE0054A314 /* FSCalendarDynamicHeader.h */; };
-		3882257B21BAFAAE0054A314 /* FSCalendarAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255B21BAFAAE0054A314 /* FSCalendarAppearance.h */; };
-		3882257C21BAFAAE0054A314 /* FSCalendarCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255C21BAFAAE0054A314 /* FSCalendarCollectionView.h */; };
+		3882257921BAFAAE0054A314 /* FSCalendarCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255921BAFAAD0054A314 /* FSCalendarCollectionViewLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3882257A21BAFAAE0054A314 /* FSCalendarDynamicHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255A21BAFAAE0054A314 /* FSCalendarDynamicHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3882257B21BAFAAE0054A314 /* FSCalendarAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255B21BAFAAE0054A314 /* FSCalendarAppearance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3882257C21BAFAAE0054A314 /* FSCalendarCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255C21BAFAAE0054A314 /* FSCalendarCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882257D21BAFAAE0054A314 /* FSCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882255D21BAFAAE0054A314 /* FSCalendarCell.m */; };
-		3882257E21BAFAAE0054A314 /* FSCalendarExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255E21BAFAAE0054A314 /* FSCalendarExtensions.h */; };
-		3882257F21BAFAAE0054A314 /* FSCalendarDelegationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255F21BAFAAE0054A314 /* FSCalendarDelegationProxy.h */; };
+		3882257E21BAFAAE0054A314 /* FSCalendarExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255E21BAFAAE0054A314 /* FSCalendarExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3882257F21BAFAAE0054A314 /* FSCalendarDelegationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882255F21BAFAAE0054A314 /* FSCalendarDelegationProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882258021BAFAAE0054A314 /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882256021BAFAAE0054A314 /* FSCalendarStickyHeader.m */; };
 		3882258121BAFAAE0054A314 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882256121BAFAAE0054A314 /* FSCalendarCollectionView.m */; };
-		3882258221BAFAAE0054A314 /* FSCalendarSeparatorDecorationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882256221BAFAAE0054A314 /* FSCalendarSeparatorDecorationView.h */; };
-		3882258321BAFAAE0054A314 /* FSCalendarStickyHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882256321BAFAAE0054A314 /* FSCalendarStickyHeader.h */; };
-		3882258421BAFAAE0054A314 /* FSCalendarCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882256421BAFAAE0054A314 /* FSCalendarCell.h */; };
+		3882258221BAFAAE0054A314 /* FSCalendarSeparatorDecorationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882256221BAFAAE0054A314 /* FSCalendarSeparatorDecorationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3882258321BAFAAE0054A314 /* FSCalendarStickyHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882256321BAFAAE0054A314 /* FSCalendarStickyHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3882258421BAFAAE0054A314 /* FSCalendarCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882256421BAFAAE0054A314 /* FSCalendarCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -352,20 +348,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3882257A21BAFAAE0054A314 /* FSCalendarDynamicHeader.h in Headers */,
+				3882250C21BAE70B0054A314 /* QuestionsViewController.h in Headers */,
 				3882254221BAFA340054A314 /* BEMCheckBox.h in Headers */,
-				3882256D21BAFAAE0054A314 /* FSCalendar.h in Headers */,
+				3882253D21BAFA340054A314 /* BEMCheckBoxGroup.h in Headers */,
+				3882257A21BAFAAE0054A314 /* FSCalendarDynamicHeader.h in Headers */,
 				3882256C21BAFAAE0054A314 /* FSCalendarCalculator.h in Headers */,
-				3882251E21BAE7140054A314 /* SelectMultipleChoicesCardView.h in Headers */,
 				3882257921BAFAAE0054A314 /* FSCalendarCollectionViewLayout.h in Headers */,
 				3882257421BAFAAE0054A314 /* FSCalendarConstants.h in Headers */,
 				3882257C21BAFAAE0054A314 /* FSCalendarCollectionView.h in Headers */,
-				388224E621BAE2840054A314 /* QuestionKit.h in Headers */,
+				3882256A21BAFAAE0054A314 /* FSCalendarWeekdayView.h in Headers */,
 				3882257E21BAFAAE0054A314 /* FSCalendarExtensions.h in Headers */,
+				3882256D21BAFAAE0054A314 /* FSCalendar.h in Headers */,
+				3882251E21BAE7140054A314 /* SelectMultipleChoicesCardView.h in Headers */,
 				3882252521BAE7140054A314 /* MultiLineTextCardView.h in Headers */,
 				3882250A21BAE70B0054A314 /* DateRangePickerViewController.h in Headers */,
-				3882256A21BAFAAE0054A314 /* FSCalendarWeekdayView.h in Headers */,
-				3882253D21BAFA340054A314 /* BEMCheckBoxGroup.h in Headers */,
 				3882252121BAE7140054A314 /* PromptView.h in Headers */,
 				3882257F21BAFAAE0054A314 /* FSCalendarDelegationProxy.h in Headers */,
 				3882258221BAFAAE0054A314 /* FSCalendarSeparatorDecorationView.h in Headers */,
@@ -379,9 +375,9 @@
 				3882252321BAE7140054A314 /* SelectOneCardView.h in Headers */,
 				3882256621BAFAAE0054A314 /* FSCalendarDelegationFactory.h in Headers */,
 				3882256E21BAFAAE0054A314 /* FSCalendarHeaderView.h in Headers */,
-				3882250C21BAE70B0054A314 /* QuestionsViewController.h in Headers */,
 				3882257B21BAFAAE0054A314 /* FSCalendarAppearance.h in Headers */,
 				3882258421BAFAAE0054A314 /* FSCalendarCell.h in Headers */,
+				388224E621BAE2840054A314 /* QuestionKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,10 +460,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3882257721BAFAAE0054A314 /* Info.plist in Resources */,
-				3882250121BAE66B0054A314 /* .travis.yml in Resources */,
-				388224FF21BAE6600054A314 /* .oclint in Resources */,
-				388224FD21BAE64A0054A314 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,7 +582,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -665,6 +656,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = QuestionKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -689,6 +681,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = QuestionKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

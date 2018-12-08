@@ -29,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface QuestionsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
+- (id) initWithQuestions:(NSDictionary *) questions;
+
 @property NSObject<QuestionsViewControllerDelegate> * delegate;
 
 @end
