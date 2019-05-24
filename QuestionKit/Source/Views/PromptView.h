@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) next;
 - (void) updated;
 
+- (id) localizedValue:(NSDictionary *) values;
+
 @end
 
 NS_ASSUME_NONNULL_END

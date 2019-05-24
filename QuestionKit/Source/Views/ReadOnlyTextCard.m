@@ -1,14 +1,14 @@
 //
-//  SingleLineTextCardView.m
-//  Enviromonitor
+//  ReadOnlyTextCard.m
+//  QuestionKit
 //
-//  Created by Chris Karr on 11/5/18.
-//  Copyright © 2018 CACHET. All rights reserved.
+//  Created by Chris Karr on 4/30/19.
+//  Copyright © 2019 Audacious Software. All rights reserved.
 //
 
-#import "SingleLineTextCardView.h"
+#import "ReadOnlyTextCard.h"
 
-@interface SingleLineTextCardView ()
+@interface ReadOnlyTextCard ()
 
 @property UIView * maskingView;
 
@@ -16,9 +16,9 @@
 
 @end
 
-@implementation SingleLineTextCardView
+@implementation ReadOnlyTextCard
 
-- (id) initWithPrompt:(NSDictionary *) prompt textField:(UITextField *) textField changeAction:(void (^)(NSString * key, id value)) changeAction {
+- (id) initWithPrompt:(NSDictionary *) prompt {
     if (self = [super initWithFrame:CGRectZero]) {
         self.layer.masksToBounds = NO;
         self.layer.cornerRadius = 5;
@@ -28,7 +28,6 @@
         self.layer.shadowOffset = CGSizeMake(0, 0);
         
         self.prompt = prompt;
-        self.changeAction = changeAction;
         
         self.maskingView = [[UIView alloc] initWithFrame:CGRectZero];
         self.maskingView.layer.masksToBounds = NO;
@@ -38,24 +37,12 @@
         [self addSubview:self.maskingView];
         
         self.promptLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        self.promptLabel.text = [self localizedValue:self.prompt[@"prompt"]];
+        self.promptLabel.text = [self localizedValue:self.prompt[@"text"]];
         self.promptLabel.numberOfLines = -1;
         self.promptLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.promptLabel.font = [UIFont boldSystemFontOfSize:15];
         
         [self.maskingView addSubview:self.promptLabel];
-        
-        if (textField == nil) {
-            textField = [[UITextField alloc] initWithFrame:CGRectZero];
-        }
-        
-        self.textField = textField;
-        
-        self.textField.delegate = self;
-        
-        [self.maskingView addSubview:self.textField];
-        
-        [self.textField sizeToFit];
     }
     
     return self;
@@ -70,10 +57,6 @@
                                                           context:nil];
     
     top += ceil(textRect.size.height);
-    
-    top += 10;
-    
-    top += ceil(self.textField.frame.size.height);
     
     top += 10;
     
@@ -105,59 +88,10 @@
     top += ceil(textRect.size.height);
     
     top += 10;
-    
-    CGRect textFrame = self.textField.frame;
-    textFrame.size.width = frame.size.width - 20;
-    textFrame.origin.x = 10;
-    textFrame.origin.y = top;
-    
-    self.textField.frame = textFrame;
-    
-    top += textFrame.size.height;
-    
-    top += 10;
-    
+        
     self.maskingView.frame = self.bounds;
     
     [self setNeedsDisplay];
-}
-
-- (BOOL)textField:(UITextField *) textField shouldChangeCharactersInRange:(NSRange) range replacementString:(NSString *) text {
-    if ([text isEqualToString:@"\n"]) {
-        self.changeAction(self.prompt[@"key"], textField.text);
-
-        [textField resignFirstResponder];
-
-        [self next];
-
-        return NO;
-    }
-
-    self.changeAction(self.prompt[@"key"], textField.text);
-
-    [self updated];
-
-    return YES;
-}
-
-- (void) didUpdatePosition {
-    if ([self position] == [self maxPosition]) {
-        self.textField.returnKeyType = UIReturnKeyDone;
-    } else {
-        self.textField.returnKeyType = UIReturnKeyNext;
-    }
-}
-
-- (void) focus {
-    [self.textField becomeFirstResponder];
-
-    [self updated];
-}
-
-- (BOOL) textFieldShouldBeginEditing:(UITextField *) textField {
-    [self updated];
-    
-    return YES;
 }
 
 @end

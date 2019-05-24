@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38168F5B22791B3F004B7EA5 /* ReadOnlyTextCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 38168F5922791B3F004B7EA5 /* ReadOnlyTextCard.h */; };
+		38168F5C22791B3F004B7EA5 /* ReadOnlyTextCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 38168F5A22791B3F004B7EA5 /* ReadOnlyTextCard.m */; };
 		388224DF21BAE2840054A314 /* QuestionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388224D521BAE2830054A314 /* QuestionKit.framework */; };
 		388224E421BAE2840054A314 /* QuestionKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 388224E321BAE2840054A314 /* QuestionKitTests.m */; };
 		388224E621BAE2840054A314 /* QuestionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 388224D821BAE2830054A314 /* QuestionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,8 +27,6 @@
 		3882252421BAE7140054A314 /* SingleLineTextCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882251621BAE7140054A314 /* SingleLineTextCardView.m */; };
 		3882252521BAE7140054A314 /* MultiLineTextCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251721BAE7140054A314 /* MultiLineTextCardView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882252621BAE7140054A314 /* DateRangeCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882251821BAE7140054A314 /* DateRangeCardView.m */; };
-		3882252721BAE7140054A314 /* PhotoCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251921BAE7140054A314 /* PhotoCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3882252821BAE7140054A314 /* PhotoCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882251A21BAE7140054A314 /* PhotoCard.m */; };
 		3882252921BAE7140054A314 /* DateRangeCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882251B21BAE7140054A314 /* DateRangeCardView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882253C21BAFA340054A314 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882253421BAFA340054A314 /* BEMPathManager.m */; };
 		3882253D21BAFA340054A314 /* BEMCheckBoxGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882253521BAFA340054A314 /* BEMCheckBoxGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,6 +80,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38168F5922791B3F004B7EA5 /* ReadOnlyTextCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ReadOnlyTextCard.h; path = Source/Views/ReadOnlyTextCard.h; sourceTree = "<group>"; };
+		38168F5A22791B3F004B7EA5 /* ReadOnlyTextCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ReadOnlyTextCard.m; path = Source/Views/ReadOnlyTextCard.m; sourceTree = "<group>"; };
 		388224D521BAE2830054A314 /* QuestionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuestionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		388224D821BAE2830054A314 /* QuestionKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionKit.h; sourceTree = "<group>"; };
 		388224D921BAE2830054A314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,8 +106,6 @@
 		3882251621BAE7140054A314 /* SingleLineTextCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleLineTextCardView.m; path = Source/Views/SingleLineTextCardView.m; sourceTree = "<group>"; };
 		3882251721BAE7140054A314 /* MultiLineTextCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiLineTextCardView.h; path = Source/Views/MultiLineTextCardView.h; sourceTree = "<group>"; };
 		3882251821BAE7140054A314 /* DateRangeCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateRangeCardView.m; path = Source/Views/DateRangeCardView.m; sourceTree = "<group>"; };
-		3882251921BAE7140054A314 /* PhotoCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoCard.h; path = Source/Views/PhotoCard.h; sourceTree = "<group>"; };
-		3882251A21BAE7140054A314 /* PhotoCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoCard.m; path = Source/Views/PhotoCard.m; sourceTree = "<group>"; };
 		3882251B21BAE7140054A314 /* DateRangeCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateRangeCardView.h; path = Source/Views/DateRangeCardView.h; sourceTree = "<group>"; };
 		3882252A21BAE73E0054A314 /* QuestionKit-Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "QuestionKit-Shared.h"; path = "Source/QuestionKit-Shared.h"; sourceTree = "<group>"; };
 		3882252B21BAE7B60054A314 /* QuestionKit.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = QuestionKit.modulemap; sourceTree = "<group>"; };
@@ -264,8 +264,6 @@
 				3882251821BAE7140054A314 /* DateRangeCardView.m */,
 				3882251721BAE7140054A314 /* MultiLineTextCardView.h */,
 				3882251121BAE7140054A314 /* MultiLineTextCardView.m */,
-				3882251921BAE7140054A314 /* PhotoCard.h */,
-				3882251A21BAE7140054A314 /* PhotoCard.m */,
 				3882251321BAE7140054A314 /* PromptView.h */,
 				3882251421BAE7140054A314 /* PromptView.m */,
 				3882251021BAE7140054A314 /* SelectMultipleChoicesCardView.h */,
@@ -274,6 +272,8 @@
 				3882251221BAE7140054A314 /* SelectOneCardView.m */,
 				3882250E21BAE7140054A314 /* SingleLineTextCardView.h */,
 				3882251621BAE7140054A314 /* SingleLineTextCardView.m */,
+				38168F5922791B3F004B7EA5 /* ReadOnlyTextCard.h */,
+				38168F5A22791B3F004B7EA5 /* ReadOnlyTextCard.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -359,6 +359,7 @@
 				3882256A21BAFAAE0054A314 /* FSCalendarWeekdayView.h in Headers */,
 				3882257E21BAFAAE0054A314 /* FSCalendarExtensions.h in Headers */,
 				3882256D21BAFAAE0054A314 /* FSCalendar.h in Headers */,
+				38168F5B22791B3F004B7EA5 /* ReadOnlyTextCard.h in Headers */,
 				3882251E21BAE7140054A314 /* SelectMultipleChoicesCardView.h in Headers */,
 				3882252521BAE7140054A314 /* MultiLineTextCardView.h in Headers */,
 				3882250A21BAE70B0054A314 /* DateRangePickerViewController.h in Headers */,
@@ -370,7 +371,6 @@
 				3882258321BAFAAE0054A314 /* FSCalendarStickyHeader.h in Headers */,
 				3882254121BAFA340054A314 /* BEMAnimationManager.h in Headers */,
 				3882251C21BAE7140054A314 /* SingleLineTextCardView.h in Headers */,
-				3882252721BAE7140054A314 /* PhotoCard.h in Headers */,
 				3882252921BAE7140054A314 /* DateRangeCardView.h in Headers */,
 				3882252321BAE7140054A314 /* SelectOneCardView.h in Headers */,
 				3882256621BAFAAE0054A314 /* FSCalendarDelegationFactory.h in Headers */,
@@ -477,7 +477,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3882252821BAE7140054A314 /* PhotoCard.m in Sources */,
 				3882258021BAFAAE0054A314 /* FSCalendarStickyHeader.m in Sources */,
 				3882257021BAFAAE0054A314 /* FSCalendarSeparatorDecorationView.m in Sources */,
 				3882252021BAE7140054A314 /* SelectOneCardView.m in Sources */,
@@ -492,6 +491,7 @@
 				3882257821BAFAAE0054A314 /* FSCalendarTransitionCoordinator.m in Sources */,
 				3882250D21BAE70B0054A314 /* QuestionsViewController.m in Sources */,
 				3882256921BAFAAE0054A314 /* FSCalendarDelegationProxy.m in Sources */,
+				38168F5C22791B3F004B7EA5 /* ReadOnlyTextCard.m in Sources */,
 				3882258121BAFAAE0054A314 /* FSCalendarCollectionView.m in Sources */,
 				3882253C21BAFA340054A314 /* BEMPathManager.m in Sources */,
 				3882257321BAFAAE0054A314 /* FSCalendarDelegationFactory.m in Sources */,
