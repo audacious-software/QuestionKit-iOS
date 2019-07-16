@@ -17,8 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) updateValue:(id) value forKey:(NSString *) key;
 - (BOOL) supportsOperation:(NSString *) operation;
 - (BOOL) evaluateValue:(id) value withOperation:(NSString *) operation;
-- (UITextField *) newTextField;
-- (NSArray *) newTextViews;
+- (UITextField *) newTextFieldForKey:(NSString *) key;
+- (NSArray *) newTextViewsForKey:(NSString *) key;
+- (NSDictionary *) currentAnswers; // ???
+- (void) updateAnswers:(NSDictionary *) answers;
+
 @end
 
 @protocol QuestionsViewControllerDataSource
@@ -28,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface QuestionsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+@property UITableView * questionsTable;
 
 - (id) initWithQuestions:(NSDictionary *) questions;
 

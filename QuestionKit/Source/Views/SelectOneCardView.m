@@ -203,4 +203,20 @@
     [self setNeedsDisplay];
 }
 
+- (void) initializeValue:(id) value {
+    if ([value isKindOfClass:[NSString class]]) {
+        NSInteger index = 0;
+        
+        for (NSDictionary * option in self.prompt[@"options"]) {
+            BEMCheckBox * checkBox = self.checkBoxes[index];
+            
+            if ([option[@"value"] isEqual:value]) {
+                checkBox.on = YES;
+            }
+            
+            index += 1;
+        }
+    }
+}
+
 @end

@@ -191,4 +191,10 @@
     [self updated];
 }
 
+- (void) initializeValue:(id) value {
+    if ([value isKindOfClass:[NSString class]]) {
+        self.textView.text = value;
+    }
+}
+
 @end

@@ -91,7 +91,6 @@
     
     for (NSUInteger i = 0; i < self.checkBoxes.count; i++) {
         BEMCheckBox * checkBox = self.checkBoxes[i];
-        
 
         if (box == checkBox) {
             [selectedValues removeObject:self.prompt[@"options"][i][@"value"]];
@@ -209,6 +208,26 @@
     self.maskingView.frame = self.bounds;
     
     [self setNeedsDisplay];
+}
+
+- (void) initializeValue:(id) value {
+    if ([value isKindOfClass:[NSArray class]]) {
+        NSArray * values = (NSArray *) value;
+        
+        for (id valueItem in values) {
+            NSInteger index = 0;
+            
+            for (NSDictionary * option in self.prompt[@"options"]) {
+                BEMCheckBox * checkBox = self.checkBoxes[index];
+                
+                if ([option[@"value"] isEqual:valueItem]) {
+                    checkBox.on = YES;
+                }
+                
+                index += 1;
+            }
+        }
+    }
 }
 
 @end

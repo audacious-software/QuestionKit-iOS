@@ -94,4 +94,8 @@
     [self setNeedsDisplay];
 }
 
+- (void) initializeValue:(id) value {
+    // Do nothing.
+}
+
 @end

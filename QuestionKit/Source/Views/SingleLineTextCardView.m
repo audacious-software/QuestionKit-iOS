@@ -160,4 +160,10 @@
     return YES;
 }
 
+- (void) initializeValue:(id) value {
+    if ([value isKindOfClass:[NSString class]]) {
+        self.textField.text = value;
+    }
+}
+
 @end

@@ -87,4 +87,8 @@
     return values.description;
 }
 
+- (void) initializeValue:(id) value {
+    NSLog(@"IMPLEMENT IN SUBCLASS: %@.initializeValue", [self class]);
+}
+
 @end

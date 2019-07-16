@@ -16,12 +16,12 @@
 #import "SingleLineTextCardView.h"
 #import "DateRangeCardView.h"
 #import "SelectMultipleChoicesCardView.h"
+#import "ReadOnlyTextCard.h"
 
 #define CARD_ITEM @"SurveyViewController.CARD_ITEM"
 
 @interface QuestionsViewController()
 
-@property UITableView * questionsTable;
 @property NSDictionary * questions;
 @property NSArray * activePrompts;
 @property NSMutableArray * activePromptViews;
@@ -44,7 +44,6 @@
     NSDictionary * questions = [NSJSONSerialization JSONObjectWithData:data
                                                             options:kNilOptions
                                                               error:&error];
-    
     if (error != nil) {
         NSLog(@"ERROR: %@", error);
     }
@@ -67,6 +66,7 @@
     self.questionsTable.delegate = self;
     self.questionsTable.dataSource = self;
     self.questionsTable.backgroundColor = [UIColor colorWithWhite:(0xe0 / 255.0) alpha:1.0];
+    self.questionsTable.rowHeight = UITableViewAutomaticDimension;
     
     [self.view addSubview:self.questionsTable];
 
@@ -106,8 +106,6 @@
                                                                                           animated:YES];
                                                       } completion:nil];
     }];
-
-    [self reloadData];
 }
 
 - (void) viewDidLayoutSubviews {
@@ -122,6 +120,12 @@
     }
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -129,7 +133,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self activePrompts].count;
+    return self.activePrompts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -163,7 +167,7 @@
         [self reloadData];
 
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self scrollAndFocusItem:(indexPath.row + 1)];
+//            [self scrollAndFocusItem:(indexPath.row + 1)];
         });
     }];
     
@@ -175,7 +179,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self.activePromptViews[indexPath.row] heightForWidth:(tableView.frame.size.width - 20)] + 15;
+    CGFloat height = [self.activePromptViews[indexPath.row] heightForWidth:(tableView.frame.size.width - 20)] + 15;
+    
+    NSLog(@"HEIGHT FOR %@: %f", indexPath, height);
+    
+    return height;
 }
 
 - (void) scrollAndFocusItem:(NSInteger) itemIndex {
@@ -213,6 +221,8 @@
                 }];
                 
                 self.allPromptViews[prompt[@"key"]] = card;
+                
+                [card initializeValue:self.currentAnswers[prompt[@"key"]]];
             }
             
             [self.activePromptViews addObject:card];
@@ -227,6 +237,8 @@
                 }];
                 
                 self.allPromptViews[prompt[@"key"]] = card;
+
+                [card initializeValue:self.currentAnswers[prompt[@"key"]]];
             }
             
             [self.activePromptViews addObject:card];
@@ -236,9 +248,9 @@
             if (card == nil) {
                 UITextView * textView = nil;
                 UIView * parentView = nil;
-                
-                if (self.delegate != nil && [self.delegate respondsToSelector:@selector(newTextViews)]) {
-                    NSArray * views = [self.delegate newTextViews];
+
+                if (self.delegate != nil && [self.delegate respondsToSelector:@selector(newTextViewsForKey:)]) {
+                    NSArray * views = [self.delegate newTextViewsForKey:prompt[@"key"]];
                     
                     textView = views.firstObject;
                     parentView = views.lastObject;
@@ -250,10 +262,12 @@
                                                         changeAction:^(NSString * key, id value) {
                                                             [self updateValue:value forKey:key];
                                                         }];
-                
+
                 self.allPromptViews[prompt[@"key"]] = card;
+
+                [card initializeValue:self.currentAnswers[prompt[@"key"]]];
             }
-            
+
             [self.activePromptViews addObject:card];
         } else if ([@"single-line" isEqualToString:prompt[@"prompt-type"]]) {
             SingleLineTextCardView * card = self.allPromptViews[prompt[@"key"]];
@@ -261,8 +275,8 @@
             if (card == nil) {
                 UITextField * textField = nil;
                 
-                if (self.delegate != nil && [self.delegate respondsToSelector:@selector(newTextField)]) {
-                    textField = [self.delegate newTextField];
+                if (self.delegate != nil && [self.delegate respondsToSelector:@selector(newTextFieldForKey:)]) {
+                    textField = [self.delegate newTextFieldForKey:prompt[@"key"]];
                 }
 
                 card = [[SingleLineTextCardView alloc] initWithPrompt:prompt
@@ -272,6 +286,8 @@
                                                          }];
                 
                 self.allPromptViews[prompt[@"key"]] = card;
+
+                [card initializeValue:self.currentAnswers[prompt[@"key"]]];
             }
             
             [self.activePromptViews addObject:card];
@@ -281,10 +297,10 @@
             if (card == nil) {
                 UITextField * textField = nil;
                 
-                if (self.delegate != nil && [self.delegate respondsToSelector:@selector(newTextField)]) {
-                    textField = [self.delegate newTextField];
+                if (self.delegate != nil && [self.delegate respondsToSelector:@selector(newTextFieldForKey:)]) {
+                    textField = [self.delegate newTextFieldForKey:prompt[@"key"]];
                 }
-
+                
                 card = [[DateRangeCardView alloc] initWithPrompt:prompt
                                                        textField:textField
                                                     changeAction:^(NSString * key, id value) {
@@ -297,14 +313,27 @@
                     DateRangePickerViewController * picker = [[DateRangePickerViewController alloc] initWithReturnAction:returnDates];
                     [picker seedSelectedDate:start];
                     [picker seedSelectedDate:end];
-
+                    
                     [self.navigationController pushViewController:picker animated:YES];
                 }];
+
+                [card initializeValue:self.currentAnswers[prompt[@"key"]]];
+            }
+            
+            [self.activePromptViews addObject:card];
+        } else if ([@"read-only-text" isEqualToString:prompt[@"prompt-type"]]) {
+            ReadOnlyTextCard * card = self.allPromptViews[prompt[@"key"]];
+            
+            if (card == nil) {
+                card = [[ReadOnlyTextCard alloc] initWithPrompt:prompt];
+                
+                self.allPromptViews[prompt[@"key"]] = card;
+
+                [card initializeValue:self.currentAnswers[prompt[@"key"]]];
             }
             
             [self.activePromptViews addObject:card];
         } else {
-            // TODO: Change to visible placeholder...
             SelectOneCardView * card = self.allPromptViews[prompt[@"key"]];
             
             if (card == nil) {
@@ -315,6 +344,8 @@
                 }];
                 
                 self.allPromptViews[prompt[@"key"]] = card;
+
+                [card initializeValue:self.currentAnswers[prompt[@"key"]]];
             }
             
             [self.activePromptViews addObject:card];
@@ -323,13 +354,19 @@
     
     if ([self.activePromptViews isEqualToArray:oldActivePrompts] == NO) {
         [self.questionsTable reloadData];
-
-        [self.questionsTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.selectedItem
-                                                                    inSection:0]
-                                atScrollPosition:UITableViewScrollPositionBottom
-                                        animated:YES];
+        
+        if (self.selectedItem >= self.activePrompts.count) {
+            self.selectedItem = self.activePrompts.count - 1;
+        }
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC / 32), dispatch_get_main_queue(), ^{
+            [self.questionsTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.selectedItem
+                                                                           inSection:0]
+                                       atScrollPosition:UITableViewScrollPositionTop
+                                               animated:NO];
+        });
     }
-    
+
     BOOL isComplete = NO;
     
     for (NSDictionary * action in self.questions[@"completed-actions"]) {
@@ -417,6 +454,20 @@
             } else {
                 completed = NO;
             }
+        } else if ([@"in" isEqualToString:operation]) {
+            if ([answerValue isKindOfClass:[NSString class]]) {
+                NSString * stringAnswer = (NSString *) answerValue;
+                
+                if ([stringAnswer rangeOfString:[value description]].location == NSNotFound) {
+                    completed = NO;
+                }
+            } else if ([answerValue isKindOfClass:[NSArray class]]) {
+                NSArray * answerArray = (NSArray *) answerValue;
+                
+                if ([answerArray indexOfObject:value] == NSNotFound) {
+                    completed = NO;
+                }
+            }
         }
     }
     
@@ -490,6 +541,20 @@
                     } else {
                         matches = NO;
                     }
+                } else if ([@"in" isEqualToString:operation]) {
+                    if ([answerValue isKindOfClass:[NSString class]]) {
+                        NSString * stringAnswer = (NSString *) answerValue;
+                        
+                        if ([stringAnswer rangeOfString:[value description]].location == NSNotFound) {
+                            matches = NO;
+                        }
+                    } else if ([answerValue isKindOfClass:[NSArray class]]) {
+                        NSArray * answerArray = (NSArray *) answerValue;
+                        
+                        if ([answerArray indexOfObject:value] == NSNotFound) {
+                            matches = NO;
+                        }
+                    }
                 }
             }
             
@@ -517,7 +582,7 @@
 - (void) updateValue:(id) value forKey:(NSString *) key {
     self.currentAnswers[key] = value;
     
-    if (self.delegate != nil) {
+    if (self.delegate != nil && [self hash] != [self.delegate hash]) {
         [self.delegate updateValue:value forKey:key];
     }
 }
@@ -534,6 +599,10 @@
     }
     
     return self;
+}
+
+- (void) updateAnswers:(NSDictionary *) answers {
+    [self.currentAnswers setValuesForKeysWithDictionary:answers];
 }
 
 @end
