@@ -181,8 +181,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat height = [self.activePromptViews[indexPath.row] heightForWidth:(tableView.frame.size.width - 20)] + 15;
     
-    NSLog(@"HEIGHT FOR %@: %f", indexPath, height);
-    
     return height;
 }
 
