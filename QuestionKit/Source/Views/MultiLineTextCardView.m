@@ -38,42 +38,48 @@
 
         self.prompt = prompt;
         self.changeAction = changeAction;
-        
+
         self.maskingView = [[UIView alloc] initWithFrame:CGRectZero];
         self.maskingView.layer.masksToBounds = NO;
         self.maskingView.layer.cornerRadius = 5;
         self.maskingView.backgroundColor = [UIColor whiteColor];
-        
+ 
         [self addSubview:self.maskingView];
-        
+
         self.promptLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        self.promptLabel.text = self.prompt[@"prompt"];
+        self.promptLabel.text = [self localizedValue:self.prompt[@"prompt"]];
         self.promptLabel.numberOfLines = -1;
         self.promptLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.promptLabel.font = [UIFont boldSystemFontOfSize:15];
-        
+
         [self.maskingView addSubview:self.promptLabel];
         
         if (textView == nil || parentView == nil) {
             textView = [[UITextView alloc] initWithFrame:CGRectZero];
             parentView = textView;
         }
-        
-        textView.delegate = self;
-        self.textView = textView;
 
-        if ([parentView respondsToSelector:@selector(setPlaceholderText:)]) {
+        self.textView = textView;
+        self.parentView = parentView;
+
+        self.textView.delegate = self;
+
+        if (self.prompt[@"hint"] != nil && [self.parentView respondsToSelector:@selector(setPlaceholder:)]) {
             typedef void (*set_placeholder)(id, SEL, NSString *);
 
             set_placeholder setFunction = (set_placeholder) objc_msgSend;
-            setFunction(parentView, @selector(setPlaceholderText:), self.prompt[@"hint"]);
+            setFunction(parentView, @selector(setPlaceholder:), [self localizedValue:self.prompt[@"hint"]]);
         }
 
-        [parentView sizeToFit];
-        
-        [self.maskingView addSubview:parentView];
+        [self.maskingView addSubview:self.parentView];
+
+        if ([self.parentView respondsToSelector:@selector(sizeToFit)]) {
+            [self.parentView sizeToFit];
+        } else {
+            [self.textView sizeToFit];
+        }
     }
-    
+
     return self;
 }
 
@@ -90,7 +96,7 @@
     
     top += 10;
 
-    top += ceil(self.textView.frame.size.height);
+    top += ceil(self.parentView.frame.size.height);
     
     top += 10;
     
@@ -123,13 +129,16 @@
     
     top += 10;
     
-    CGRect textFrame = self.textView.frame;
+    CGRect textFrame = self.parentView.frame;
     textFrame.size.width = frame.size.width - 20;
     textFrame.origin.x = 10;
     textFrame.origin.y = top;
 
-    self.textView.frame = textFrame;
+    self.parentView.frame = textFrame;
     
+    [self.parentView setNeedsDisplay];
+    [self.parentView setNeedsLayout];
+
     top += textFrame.size.height;
     
     top += 10;
@@ -137,11 +146,18 @@
     self.maskingView.frame = self.bounds;
     
     [self setNeedsDisplay];
+    [self setNeedsLayout];
 }
 
--(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+- (void) textViewDidEndEditing:(UITextView *)textView {
+    NSLog(@"TEXT: %@", textView.text);
+    
     self.changeAction(self.prompt[@"key"], textView.text);
+    
+    [self updated];
+}
 
+-(BOOL) textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     if([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
         
@@ -173,6 +189,12 @@
     [self.textView becomeFirstResponder];
     
     [self updated];
+}
+
+- (void) initializeValue:(id) value {
+    if ([value isKindOfClass:[NSString class]]) {
+        self.textView.text = value;
+    }
 }
 
 @end

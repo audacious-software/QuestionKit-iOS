@@ -24,7 +24,6 @@ FOUNDATION_EXPORT const unsigned char QuestionKitVersionString[];
 #import "DateRangeCardView.h"
 #import "PromptView.h"
 #import "SelectOneCardView.h"
-#import "PhotoCard.h"
 
 #import "BEMCheckBox.h"
 #import "BEMCheckBoxGroup.h"

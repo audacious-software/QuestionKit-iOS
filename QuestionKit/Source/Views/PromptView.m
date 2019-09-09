@@ -73,4 +73,22 @@
     }
 }
 
+- (id) localizedValue:(NSDictionary *) values {
+    for (NSString * language in [NSLocale preferredLanguages]) {
+        NSString * shortLanguage = [language substringWithRange:NSMakeRange(0, 2)];
+        
+        id value = values[shortLanguage];
+        
+        if (value != nil) {
+            return value;
+        }
+    }
+    
+    return values.description;
+}
+
+- (void) initializeValue:(id) value {
+    NSLog(@"IMPLEMENT IN SUBCLASS: %@.initializeValue", [self class]);
+}
+
 @end

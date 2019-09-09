@@ -49,7 +49,7 @@
         [self addSubview:self.maskingView];
         
         self.promptLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        self.promptLabel.text = self.prompt[@"prompt"];
+        self.promptLabel.text = [self localizedValue:self.prompt[@"prompt"]];
         self.promptLabel.numberOfLines = -1;
         self.promptLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.promptLabel.font = [UIFont boldSystemFontOfSize:15];
@@ -71,7 +71,7 @@
             [self.checkBoxes addObject:checkBox];
             
             UILabel * checkLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-            checkLabel.text = option[@"label"];
+            checkLabel.text = [self localizedValue:option[@"label"]];
             checkLabel.numberOfLines = -1;
             checkLabel.lineBreakMode = NSLineBreakByWordWrapping;
             
@@ -91,7 +91,6 @@
     
     for (NSUInteger i = 0; i < self.checkBoxes.count; i++) {
         BEMCheckBox * checkBox = self.checkBoxes[i];
-        
 
         if (box == checkBox) {
             [selectedValues removeObject:self.prompt[@"options"][i][@"value"]];
@@ -209,6 +208,26 @@
     self.maskingView.frame = self.bounds;
     
     [self setNeedsDisplay];
+}
+
+- (void) initializeValue:(id) value {
+    if ([value isKindOfClass:[NSArray class]]) {
+        NSArray * values = (NSArray *) value;
+        
+        for (id valueItem in values) {
+            NSInteger index = 0;
+            
+            for (NSDictionary * option in self.prompt[@"options"]) {
+                BEMCheckBox * checkBox = self.checkBoxes[index];
+                
+                if ([option[@"value"] isEqual:valueItem]) {
+                    checkBox.on = YES;
+                }
+                
+                index += 1;
+            }
+        }
+    }
 }
 
 @end
