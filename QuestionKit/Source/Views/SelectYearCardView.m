@@ -17,7 +17,9 @@
         UIToolbar * toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 410, 320, 44)];
         [toolbar sizeToFit];
         
-        UIBarButtonItem * spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+        UIBarButtonItem * spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                                                                 target:self
+                                                                                 action:nil];
         
         UIBarButtonItem * done = [[UIBarButtonItem alloc] initWithTitle:[self localizedStringForKey:@"action_done_keyboard"]
                                                                   style:UIBarButtonItemStyleDone
@@ -87,8 +89,10 @@
                                                                       }];
                 [prompt addAction:defaultAction];
                 
-                if (self.promptDelegate != nil) {
-                    [self.promptDelegate presentAlert:prompt];
+                if (self.controller != nil) {
+                    [self.controller presentViewController:prompt animated:YES completion:^{
+
+                    }];
                 }
             }
         }
@@ -104,8 +108,10 @@
                                                               }];
         [prompt addAction:defaultAction];
         
-        if (self.promptDelegate != nil) {
-            [self.promptDelegate presentAlert:prompt];
+        if (self.controller != nil) {
+            [self.controller presentViewController:prompt animated:YES completion:^{
+
+            }];
         }
     }
 }

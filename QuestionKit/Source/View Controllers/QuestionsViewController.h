@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol QuestionsViewControllerDelegate
 - (void) didCompleteQuestionsWithAnswers:(NSDictionary *) answers;
-@optional
 - (void) didNotCompleteQuestionsWithAnswers:(NSDictionary *) answers;
+@optional
 - (void) updateValue:(id) value forKey:(NSString *) key;
 - (BOOL) supportsOperation:(NSString *) operation;
 - (BOOL) evaluateValue:(id) value withOperation:(NSString *) operation;
@@ -30,11 +30,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface QuestionsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface QuestionsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, QuestionsViewControllerDelegate>
 
 @property UITableView * questionsTable;
 
 - (id) initWithQuestions:(NSDictionary *) questions;
+- (id) initWithQuestionsResource:(NSString *) jsonResource;
 
 @property NSObject<QuestionsViewControllerDelegate> * delegate;
 

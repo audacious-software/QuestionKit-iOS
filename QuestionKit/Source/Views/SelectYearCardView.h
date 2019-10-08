@@ -6,13 +6,17 @@
 //  Copyright © 2018 Audacious Software. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+#import "QuestionsViewController.h"
 
 #import "SingleLineTextCardView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SelectYearCardView : SingleLineTextCardView
+
+@property QuestionsViewController * controller;
 
 @end
 

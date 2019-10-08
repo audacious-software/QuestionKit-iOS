@@ -91,4 +91,8 @@
     NSLog(@"IMPLEMENT IN SUBCLASS: %@.initializeValue", [self class]);
 }
 
+- (NSString *) localizedStringForKey:(NSString *) key {
+    return NSLocalizedStringFromTableInBundle(key, @"QuestionKit", [NSBundle bundleForClass:self.class], nil);
+}
+
 @end
