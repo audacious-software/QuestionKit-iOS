@@ -13,7 +13,6 @@
 #import "DateRangeCardView.h"
 #import "MultiLineTextCardView.h"
 #import "PromptView.h"
-<<<<<<< HEAD
 #import "DateRangeCardView.h"
 #import "MultiLineTextCardView.h"
 #import "ReadOnlyTextCard.h"
@@ -21,12 +20,7 @@
 #import "SelectMultipleChoicesCardView.h"
 #import "SelectOneCardView.h"
 #import "SelectTimeCard.h"
-=======
-#import "ReadOnlyTextCard.h"
 #import "SelectYearCardView.h"
-#import "SelectMultipleChoicesCardView.h"
-#import "SelectOneCardView.h"
->>>>>>> c0b557f39cbbb85ee1c439ca6f49d499229991d1
 #import "SingleLineTextCardView.h"
 
 #define CARD_ITEM @"SurveyViewController.CARD_ITEM"
