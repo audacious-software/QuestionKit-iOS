@@ -99,6 +99,37 @@
                 [selectedValues addObject:self.prompt[@"options"][i][@"value"]];
             }
             
+            NSNumber * exclusive = self.prompt[@"options"][i][@"exclusive"];
+            
+            if (exclusive == nil) {
+                exclusive = @(NO);
+            }
+            
+            if (exclusive.boolValue && box.on) {
+                for (NSUInteger j = 0; j < self.checkBoxes.count; j++) {
+                    BEMCheckBox * uncheckBox = self.checkBoxes[j];
+
+                    if (box != uncheckBox) {
+                        [selectedValues removeObject:self.prompt[@"options"][i][@"value"]];
+                        uncheckBox.on = NO;
+                    }
+                }
+            } else {
+                for (NSUInteger j = 0; j < self.checkBoxes.count; j++) {
+                    BEMCheckBox * uncheckBox = self.checkBoxes[j];
+
+                    NSNumber * uncheckExclusive = self.prompt[@"options"][j][@"exclusive"];
+
+                    if (uncheckExclusive == nil) {
+                        uncheckExclusive = @(NO);
+                    }
+
+                    if (box != uncheckBox && uncheckExclusive.boolValue) {
+                        [selectedValues removeObject:self.prompt[@"options"][j][@"value"]];
+                        uncheckBox.on = NO;
+                    }
+                }
+            }
         } else if (checkBox.on) {
             [selectedValues addObject:self.prompt[@"options"][i][@"value"]];
         }

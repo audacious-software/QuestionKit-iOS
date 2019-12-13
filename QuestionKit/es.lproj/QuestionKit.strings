@@ -1,0 +1,16 @@
+/* 
+  QuestionKit.strings
+  QuestionKit
+
+  Created by Chris Karr on 12/20/18.
+  Copyright © 2018 Audacious Software. All rights reserved.
+*/
+
+"action_done_keyboard" = "Hecho";
+
+"title_invalid_year" = "Año No Válido";
+"message_invalid_year" = "'%@' no es un año válido. Inténtalo de nuevo.";
+"message_invalid_year_range" = "Ingrese un año entre %d y %d.";
+
+"button_close" = "Cerrar";
+

@@ -10,7 +10,10 @@
 
 #import "DateRangePickerViewController.h"
 
+#import "DateRangeCardView.h"
+#import "MultiLineTextCardView.h"
 #import "PromptView.h"
+<<<<<<< HEAD
 #import "DateRangeCardView.h"
 #import "MultiLineTextCardView.h"
 #import "ReadOnlyTextCard.h"
@@ -18,6 +21,12 @@
 #import "SelectMultipleChoicesCardView.h"
 #import "SelectOneCardView.h"
 #import "SelectTimeCard.h"
+=======
+#import "ReadOnlyTextCard.h"
+#import "SelectYearCardView.h"
+#import "SelectMultipleChoicesCardView.h"
+#import "SelectOneCardView.h"
+>>>>>>> c0b557f39cbbb85ee1c439ca6f49d499229991d1
 #import "SingleLineTextCardView.h"
 
 #define CARD_ITEM @"SurveyViewController.CARD_ITEM"
@@ -39,6 +48,26 @@
 
 - (id) init {
     NSData * data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SampleReport"
+                                                                                   ofType:@"json"]];
+    
+    NSError * error = nil;
+    
+    NSDictionary * questions = [NSJSONSerialization JSONObjectWithData:data
+                                                               options:kNilOptions
+                                                                 error:&error];
+    if (error != nil) {
+        NSLog(@"ERROR: %@", error);
+    }
+    
+    if (self = [self initWithQuestions:questions]) {
+        
+    }
+    
+    return self;
+}
+
+- (id) initWithQuestionsResource:(NSString *) jsonResource {
+    NSData * data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:jsonResource
                                                                                    ofType:@"json"]];
     
     NSError * error = nil;
@@ -246,6 +275,32 @@
                 
                 self.allPromptViews[prompt[@"key"]] = card;
                 
+                [card initializeValue:self.currentAnswers[prompt[@"key"]]];
+            }
+            
+            [self.activePromptViews addObject:card];
+        } else if ([@"select-year" isEqualToString:prompt[@"prompt-type"]]) {
+            SelectYearCardView * card = self.allPromptViews[prompt[@"key"]];
+
+            if (card == nil) {
+                UITextField * textField = nil;
+
+                if (self.delegate != nil && [self.delegate respondsToSelector:@selector(newTextFieldForKey:)]) {
+                    textField = [self.delegate newTextFieldForKey:prompt[@"key"]];
+                }
+
+                card = [[SelectYearCardView alloc] initWithPrompt:prompt
+                   textField:textField
+                changeAction:^(NSString * _Nonnull key, id  _Nonnull value) {
+                    [self updateValue:value forKey:key];
+
+                    [self reloadData];
+                }];
+                
+                self.allPromptViews[prompt[@"key"]] = card;
+                
+                card.controller = self;
+
                 [card initializeValue:self.currentAnswers[prompt[@"key"]]];
             }
             
@@ -660,6 +715,18 @@
         self.allPromptViews = [NSMutableDictionary dictionary];
         
         self.currentAnswers = [NSMutableDictionary dictionary];
+        
+        if (questions[@"name"] != nil) {
+            for (NSString * language in [NSLocale preferredLanguages]) {
+                NSString * shortLanguage = [language substringWithRange:NSMakeRange(0, 2)];
+
+                if (questions[@"name"][shortLanguage] != nil) {
+                    self.navigationItem.title = questions[@"name"][shortLanguage];
+                    
+                    break;
+                }
+            }
+        }
     }
     
     return self;
@@ -667,6 +734,23 @@
 
 - (void) updateAnswers:(NSDictionary *) answers {
     [self.currentAnswers setValuesForKeysWithDictionary:answers];
+}
+
+- (void) didNotCompleteQuestionsWithAnswers:(NSDictionary *) answers {
+    
+}
+
+- (void) didCompleteQuestionsWithAnswers:(NSDictionary *) answers {
+    NSString * close = NSLocalizedStringFromTableInBundle(@"button_close", @"QuestionKit", [NSBundle bundleForClass:self.class], nil);
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:close
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self
+                                                                             action:@selector(pop)];
+}
+
+- (void) pop {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

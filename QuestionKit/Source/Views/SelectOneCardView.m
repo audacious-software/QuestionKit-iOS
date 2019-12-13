@@ -220,7 +220,7 @@
 }
 
 - (void) didUpdatePosition {
-
+    // Do nothing...
 }
 
 @end

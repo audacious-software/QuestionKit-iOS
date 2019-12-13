@@ -139,7 +139,9 @@
         return NO;
     }
 
-    self.changeAction(self.prompt[@"key"], textField.text);
+    NSString * newValue = [textField.text stringByReplacingCharactersInRange:range withString:text];
+
+    self.changeAction(self.prompt[@"key"], newValue);
 
     [self updated];
 

@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3805CBFC234D63DA0049A996 /* QuestionKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3805CBFE234D63DA0049A996 /* QuestionKit.strings */; };
 		38168F5B22791B3F004B7EA5 /* ReadOnlyTextCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 38168F5922791B3F004B7EA5 /* ReadOnlyTextCard.h */; };
 		38168F5C22791B3F004B7EA5 /* ReadOnlyTextCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 38168F5A22791B3F004B7EA5 /* ReadOnlyTextCard.m */; };
+		383E2C3223477DB000D7A5D6 /* SelectYearCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 383E2C3023477DB000D7A5D6 /* SelectYearCardView.m */; };
+		383E2C3323477DB000D7A5D6 /* SelectYearCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 383E2C3123477DB000D7A5D6 /* SelectYearCardView.h */; };
 		388224DF21BAE2840054A314 /* QuestionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388224D521BAE2830054A314 /* QuestionKit.framework */; };
 		388224E421BAE2840054A314 /* QuestionKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 388224E321BAE2840054A314 /* QuestionKitTests.m */; };
 		388224E621BAE2840054A314 /* QuestionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 388224D821BAE2830054A314 /* QuestionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -84,8 +87,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3805CBFD234D63DA0049A996 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/QuestionKit.strings; sourceTree = "<group>"; };
+		3805CBFF234D64A70049A996 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/QuestionKit.strings; sourceTree = "<group>"; };
 		38168F5922791B3F004B7EA5 /* ReadOnlyTextCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ReadOnlyTextCard.h; path = Source/Views/ReadOnlyTextCard.h; sourceTree = "<group>"; };
 		38168F5A22791B3F004B7EA5 /* ReadOnlyTextCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ReadOnlyTextCard.m; path = Source/Views/ReadOnlyTextCard.m; sourceTree = "<group>"; };
+		383E2C3023477DB000D7A5D6 /* SelectYearCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectYearCardView.m; path = Source/Views/SelectYearCardView.m; sourceTree = "<group>"; };
+		383E2C3123477DB000D7A5D6 /* SelectYearCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectYearCardView.h; path = Source/Views/SelectYearCardView.h; sourceTree = "<group>"; };
 		388224D521BAE2830054A314 /* QuestionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuestionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		388224D821BAE2830054A314 /* QuestionKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionKit.h; sourceTree = "<group>"; };
 		388224D921BAE2830054A314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -249,6 +256,7 @@
 				3882250521BAE7020054A314 /* Views */,
 				3882250421BAE6FA0054A314 /* View Controllers */,
 				3882252A21BAE73E0054A314 /* QuestionKit-Shared.h */,
+				3805CBFE234D63DA0049A996 /* QuestionKit.strings */,
 				3882252B21BAE7B60054A314 /* QuestionKit.modulemap */,
 			);
 			name = Source;
@@ -274,10 +282,14 @@
 				3882251121BAE7140054A314 /* MultiLineTextCardView.m */,
 				3882251321BAE7140054A314 /* PromptView.h */,
 				3882251421BAE7140054A314 /* PromptView.m */,
-				3882251021BAE7140054A314 /* SelectMultipleChoicesCardView.h */,
-				3882250F21BAE7140054A314 /* SelectMultipleChoicesCardView.m */,
+				38168F5922791B3F004B7EA5 /* ReadOnlyTextCard.h */,
+				38168F5A22791B3F004B7EA5 /* ReadOnlyTextCard.m */,
 				3882251521BAE7140054A314 /* SelectOneCardView.h */,
 				3882251221BAE7140054A314 /* SelectOneCardView.m */,
+				3882251021BAE7140054A314 /* SelectMultipleChoicesCardView.h */,
+				3882250F21BAE7140054A314 /* SelectMultipleChoicesCardView.m */,
+				383E2C3123477DB000D7A5D6 /* SelectYearCardView.h */,
+				383E2C3023477DB000D7A5D6 /* SelectYearCardView.m */,
 				3882250E21BAE7140054A314 /* SingleLineTextCardView.h */,
 				3882251621BAE7140054A314 /* SingleLineTextCardView.m */,
 				38168F5922791B3F004B7EA5 /* ReadOnlyTextCard.h */,
@@ -368,6 +380,7 @@
 				3882257921BAFAAE0054A314 /* FSCalendarCollectionViewLayout.h in Headers */,
 				3882257421BAFAAE0054A314 /* FSCalendarConstants.h in Headers */,
 				3882257C21BAFAAE0054A314 /* FSCalendarCollectionView.h in Headers */,
+				383E2C3323477DB000D7A5D6 /* SelectYearCardView.h in Headers */,
 				3882256A21BAFAAE0054A314 /* FSCalendarWeekdayView.h in Headers */,
 				3882257E21BAFAAE0054A314 /* FSCalendarExtensions.h in Headers */,
 				3882256D21BAFAAE0054A314 /* FSCalendar.h in Headers */,
@@ -458,6 +471,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 388224CB21BAE2830054A314;
 			productRefGroup = 388224D621BAE2830054A314 /* Products */;
@@ -475,6 +489,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3805CBFC234D63DA0049A996 /* QuestionKit.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +528,7 @@
 				3882257321BAFAAE0054A314 /* FSCalendarDelegationFactory.m in Sources */,
 				3882256B21BAFAAE0054A314 /* FSCalendarWeekdayView.m in Sources */,
 				3882257621BAFAAE0054A314 /* FSCalendarHeaderView.m in Sources */,
+				383E2C3223477DB000D7A5D6 /* SelectYearCardView.m in Sources */,
 				3882250B21BAE70B0054A314 /* DateRangePickerViewController.m in Sources */,
 				38BE6BE52382208C006CACA0 /* SelectTimeCard.m in Sources */,
 				3882252221BAE7140054A314 /* PromptView.m in Sources */,
@@ -543,11 +559,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		3805CBFE234D63DA0049A996 /* QuestionKit.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3805CBFD234D63DA0049A996 /* en */,
+				3805CBFF234D64A70049A996 /* es */,
+			);
+			name = QuestionKit.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		388224E721BAE2840054A314 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -609,6 +638,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

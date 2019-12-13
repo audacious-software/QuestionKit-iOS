@@ -150,8 +150,6 @@
 }
 
 - (void) textViewDidEndEditing:(UITextView *)textView {
-    NSLog(@"TEXT: %@", textView.text);
-    
     self.changeAction(self.prompt[@"key"], textView.text);
     
     [self updated];
