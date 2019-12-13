@@ -98,4 +98,8 @@
     // Do nothing.
 }
 
+- (void) didUpdatePosition {
+
+}
+
 @end

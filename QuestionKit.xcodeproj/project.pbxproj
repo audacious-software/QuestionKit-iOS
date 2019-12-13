@@ -67,6 +67,10 @@
 		3882258221BAFAAE0054A314 /* FSCalendarSeparatorDecorationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882256221BAFAAE0054A314 /* FSCalendarSeparatorDecorationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882258321BAFAAE0054A314 /* FSCalendarStickyHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882256321BAFAAE0054A314 /* FSCalendarStickyHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882258421BAFAAE0054A314 /* FSCalendarCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882256421BAFAAE0054A314 /* FSCalendarCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38BE6BE42382208C006CACA0 /* SelectTimeCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BE6BE22382208C006CACA0 /* SelectTimeCard.h */; };
+		38BE6BE52382208C006CACA0 /* SelectTimeCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE6BE32382208C006CACA0 /* SelectTimeCard.m */; };
+		38BE6BF523858CEC006CACA0 /* ReadOnlyLocationCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BE6BF323858CEC006CACA0 /* ReadOnlyLocationCard.h */; };
+		38BE6BF623858CEC006CACA0 /* ReadOnlyLocationCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE6BF423858CEC006CACA0 /* ReadOnlyLocationCard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +153,10 @@
 		3882256221BAFAAE0054A314 /* FSCalendarSeparatorDecorationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarSeparatorDecorationView.h; path = "Third Party/FSCalendar/FSCalendar/FSCalendarSeparatorDecorationView.h"; sourceTree = "<group>"; };
 		3882256321BAFAAE0054A314 /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarStickyHeader.h; path = "Third Party/FSCalendar/FSCalendar/FSCalendarStickyHeader.h"; sourceTree = "<group>"; };
 		3882256421BAFAAE0054A314 /* FSCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarCell.h; path = "Third Party/FSCalendar/FSCalendar/FSCalendarCell.h"; sourceTree = "<group>"; };
+		38BE6BE22382208C006CACA0 /* SelectTimeCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SelectTimeCard.h; path = Source/Views/SelectTimeCard.h; sourceTree = "<group>"; };
+		38BE6BE32382208C006CACA0 /* SelectTimeCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SelectTimeCard.m; path = Source/Views/SelectTimeCard.m; sourceTree = "<group>"; };
+		38BE6BF323858CEC006CACA0 /* ReadOnlyLocationCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ReadOnlyLocationCard.h; path = Source/Views/ReadOnlyLocationCard.h; sourceTree = "<group>"; };
+		38BE6BF423858CEC006CACA0 /* ReadOnlyLocationCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ReadOnlyLocationCard.m; path = Source/Views/ReadOnlyLocationCard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +282,10 @@
 				3882251621BAE7140054A314 /* SingleLineTextCardView.m */,
 				38168F5922791B3F004B7EA5 /* ReadOnlyTextCard.h */,
 				38168F5A22791B3F004B7EA5 /* ReadOnlyTextCard.m */,
+				38BE6BE22382208C006CACA0 /* SelectTimeCard.h */,
+				38BE6BE32382208C006CACA0 /* SelectTimeCard.m */,
+				38BE6BF323858CEC006CACA0 /* ReadOnlyLocationCard.h */,
+				38BE6BF423858CEC006CACA0 /* ReadOnlyLocationCard.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -365,6 +377,7 @@
 				3882250A21BAE70B0054A314 /* DateRangePickerViewController.h in Headers */,
 				3882252121BAE7140054A314 /* PromptView.h in Headers */,
 				3882257F21BAFAAE0054A314 /* FSCalendarDelegationProxy.h in Headers */,
+				38BE6BE42382208C006CACA0 /* SelectTimeCard.h in Headers */,
 				3882258221BAFAAE0054A314 /* FSCalendarSeparatorDecorationView.h in Headers */,
 				3882253E21BAFA340054A314 /* BEMPathManager.h in Headers */,
 				3882257121BAFAAE0054A314 /* FSCalendarTransitionCoordinator.h in Headers */,
@@ -376,6 +389,7 @@
 				3882256621BAFAAE0054A314 /* FSCalendarDelegationFactory.h in Headers */,
 				3882256E21BAFAAE0054A314 /* FSCalendarHeaderView.h in Headers */,
 				3882257B21BAFAAE0054A314 /* FSCalendarAppearance.h in Headers */,
+				38BE6BF523858CEC006CACA0 /* ReadOnlyLocationCard.h in Headers */,
 				3882258421BAFAAE0054A314 /* FSCalendarCell.h in Headers */,
 				388224E621BAE2840054A314 /* QuestionKit.h in Headers */,
 			);
@@ -426,7 +440,7 @@
 		388224CC21BAE2830054A314 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Audacious Software";
 				TargetAttributes = {
 					388224D421BAE2830054A314 = {
@@ -443,6 +457,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 388224CB21BAE2830054A314;
 			productRefGroup = 388224D621BAE2830054A314 /* Products */;
@@ -481,6 +496,7 @@
 				3882257021BAFAAE0054A314 /* FSCalendarSeparatorDecorationView.m in Sources */,
 				3882252021BAE7140054A314 /* SelectOneCardView.m in Sources */,
 				3882256521BAFAAE0054A314 /* FSCalendarCollectionViewLayout.m in Sources */,
+				38BE6BF623858CEC006CACA0 /* ReadOnlyLocationCard.m in Sources */,
 				3882257521BAFAAE0054A314 /* FSCalendarExtensions.m in Sources */,
 				3882253F21BAFA340054A314 /* BEMCheckBoxGroup.m in Sources */,
 				3882254021BAFA340054A314 /* BEMCheckBox.m in Sources */,
@@ -498,6 +514,7 @@
 				3882256B21BAFAAE0054A314 /* FSCalendarWeekdayView.m in Sources */,
 				3882257621BAFAAE0054A314 /* FSCalendarHeaderView.m in Sources */,
 				3882250B21BAE70B0054A314 /* DateRangePickerViewController.m in Sources */,
+				38BE6BE52382208C006CACA0 /* SelectTimeCard.m in Sources */,
 				3882252221BAE7140054A314 /* PromptView.m in Sources */,
 				3882252621BAE7140054A314 /* DateRangeCardView.m in Sources */,
 				3882254321BAFA340054A314 /* BEMAnimationManager.m in Sources */,

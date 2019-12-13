@@ -219,4 +219,8 @@
     }
 }
 
+- (void) didUpdatePosition {
+
+}
+
 @end

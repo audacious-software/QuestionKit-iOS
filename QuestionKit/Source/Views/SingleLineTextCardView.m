@@ -49,6 +49,12 @@
             textField = [[UITextField alloc] initWithFrame:CGRectZero];
         }
         
+        NSDictionary * hint = prompt[@"hint"];
+        
+        if (hint != nil) {
+            textField.placeholder = [self localizedValue:hint];
+        }
+        
         self.textField = textField;
         
         self.textField.delegate = self;
