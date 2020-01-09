@@ -37,7 +37,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (id) initWithQuestions:(NSDictionary *) questions;
 - (id) initWithQuestionsResource:(NSString *) jsonResource;
 
+- (void) reloadData;
+
 @property NSObject<QuestionsViewControllerDelegate> * delegate;
+@property NSDictionary * questions;
 
 @end
 

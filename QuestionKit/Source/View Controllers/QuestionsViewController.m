@@ -27,7 +27,6 @@
 
 @interface QuestionsViewController()
 
-@property NSDictionary * questions;
 @property NSArray * activePrompts;
 @property NSMutableArray * activePromptViews;
 @property NSMutableDictionary * allPromptViews;
@@ -46,11 +45,14 @@
     
     NSError * error = nil;
     
-    NSDictionary * questions = [NSJSONSerialization JSONObjectWithData:data
-                                                               options:kNilOptions
-                                                                 error:&error];
+    NSDictionary * questions = @{};
+    
     if (error != nil) {
         NSLog(@"ERROR: %@", error);
+    } else {
+        questions = [NSJSONSerialization JSONObjectWithData:data
+                                                                   options:kNilOptions
+                                                                     error:&error];
     }
     
     if (self = [self initWithQuestions:questions]) {
@@ -565,7 +567,7 @@
             }
         }
     }
-    
+
     return completed;
 }
 
@@ -711,13 +713,17 @@
         self.currentAnswers = [NSMutableDictionary dictionary];
         
         if (questions[@"name"] != nil) {
-            for (NSString * language in [NSLocale preferredLanguages]) {
-                NSString * shortLanguage = [language substringWithRange:NSMakeRange(0, 2)];
+            if ([questions[@"name"] isKindOfClass:[NSString class]]) {
+                self.navigationItem.title = questions[@"name"];
+            } else {
+                for (NSString * language in [NSLocale preferredLanguages]) {
+                    NSString * shortLanguage = [language substringWithRange:NSMakeRange(0, 2)];
 
-                if (questions[@"name"][shortLanguage] != nil) {
-                    self.navigationItem.title = questions[@"name"][shortLanguage];
-                    
-                    break;
+                    if (questions[@"name"][shortLanguage] != nil) {
+                        self.navigationItem.title = questions[@"name"][shortLanguage];
+                        
+                        break;
+                    }
                 }
             }
         }
