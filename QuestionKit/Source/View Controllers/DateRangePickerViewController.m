@@ -6,7 +6,9 @@
 //  Copyright © 2018 CACHET. All rights reserved.
 //
 
-#import "FSCalendar.h"
+@import FSCalendar;
+
+// #import "FSCalendar.h"
 
 #import "DateRangePickerViewController.h"
 

@@ -21,13 +21,13 @@
 @property UIView * parentView;
 @property UITextView * textView;
 
-@property (nonatomic, copy) void (^changeAction)(NSString * key, id value);
+@property (nonatomic, copy) void (^changeAction)(NSString * key, id value); //!OCLint
 
 @end
 
 @implementation MultiLineTextCardView
 
-- (id) initWithPrompt:(NSDictionary *) prompt textView:(UITextView *) textView textParentView:(UIView *) parentView changeAction:(void (^)(NSString * key, id value)) changeAction {
+- (id) initWithPrompt:(NSDictionary *) prompt textView:(UITextView *) textView textParentView:(UIView *) parentView changeAction:(void (^)(NSString * key, id value)) changeAction { //!OCLint
     if (self = [super initWithFrame:CGRectZero]) {
         self.layer.masksToBounds = NO;
         self.layer.cornerRadius = 5;
@@ -55,8 +55,8 @@
         [self.maskingView addSubview:self.promptLabel];
         
         if (textView == nil || parentView == nil) {
-            textView = [[UITextView alloc] initWithFrame:CGRectZero];
-            parentView = textView;
+            textView = [[UITextView alloc] initWithFrame:CGRectZero]; //!OCLint
+            parentView = textView; //!OCLint
         }
 
         self.textView = textView;

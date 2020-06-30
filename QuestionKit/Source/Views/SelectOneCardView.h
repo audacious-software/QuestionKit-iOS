@@ -6,7 +6,7 @@
 //  Copyright © 2018 CACHET. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 #import "BEMCheckBox.h"
 

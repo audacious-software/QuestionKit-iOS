@@ -18,7 +18,7 @@
 
 @implementation SingleLineTextCardView
 
-- (id) initWithPrompt:(NSDictionary *) prompt textField:(UITextField *) textField changeAction:(void (^)(NSString * key, id value)) changeAction {
+- (id) initWithPrompt:(NSDictionary *) prompt textField:(UITextField *) textField changeAction:(void (^)(NSString * key, id value)) changeAction { //!OCLint
     if (self = [super initWithFrame:CGRectZero]) {
         self.layer.masksToBounds = NO;
         self.layer.cornerRadius = 5;
@@ -46,7 +46,7 @@
         [self.maskingView addSubview:self.promptLabel];
         
         if (textField == nil) {
-            textField = [[UITextField alloc] initWithFrame:CGRectZero];
+            textField = [[UITextField alloc] initWithFrame:CGRectZero]; //!OCLINT
         }
         
         NSDictionary * hint = prompt[@"hint"];

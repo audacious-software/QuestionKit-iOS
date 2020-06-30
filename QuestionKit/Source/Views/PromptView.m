@@ -87,7 +87,7 @@
     return values.description;
 }
 
-- (void) initializeValue:(id) value {
+- (void) initializeValue:(id) value { //!OCLint
     NSLog(@"IMPLEMENT IN SUBCLASS: %@.initializeValue", [self class]);
 }
 

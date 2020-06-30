@@ -12,7 +12,7 @@
 
 @property NSDictionary * prompt;
 @property NSMutableArray * checkBoxes;
-@property (nonatomic, copy) void (^changeAction)(NSString * key, id value);
+@property (nonatomic, copy) void (^changeAction)(NSString * key, id value); //!OCLint
 
 @property UIView * maskingView;
 
@@ -25,7 +25,7 @@
 
 @implementation SelectMultipleChoicesCardView
 
-- (id) initWithPrompt:(NSDictionary *) prompt changeAction:(void (^)(NSString * key, id value)) changeAction {
+- (id) initWithPrompt:(NSDictionary *) prompt changeAction:(void (^)(NSString * key, id value)) changeAction { //!OCLint
     if (self = [super initWithFrame:CGRectZero]) {
         self.layer.masksToBounds = NO;
         self.layer.cornerRadius = 5;

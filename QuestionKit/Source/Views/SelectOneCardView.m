@@ -13,7 +13,7 @@
 @property NSDictionary * prompt;
 @property BEMCheckBoxGroup * checkGroup;
 @property NSMutableArray * checkBoxes;
-@property (nonatomic, copy) void (^changeAction)(NSString * key, id value);
+@property (nonatomic, copy) void (^changeAction)(NSString * key, id value); //!OCLint
 
 
 @property UIView * maskingView;
@@ -27,7 +27,7 @@
 
 @implementation SelectOneCardView
 
-- (id) initWithPrompt:(NSDictionary *) prompt changeAction:(void (^)(NSString * key, id value)) changeAction {
+- (id) initWithPrompt:(NSDictionary *) prompt changeAction:(void (^)(NSString * key, id value)) changeAction { //!OCLint
     if (self = [super initWithFrame:CGRectZero]) {
         self.layer.masksToBounds = NO;
         self.layer.cornerRadius = 5;
@@ -94,10 +94,8 @@
     self.checkGroup.mustHaveSelection = YES;
     
     for (NSUInteger i = 0; i < self.checkBoxes.count; i++) {
-        if (box == self.checkBoxes[i]) {
-            if (self.changeAction != nil) {
-                self.changeAction(self.prompt[@"key"], self.prompt[@"options"][i][@"value"]);
-            }
+        if (box == self.checkBoxes[i] && self.changeAction != nil) {
+            self.changeAction(self.prompt[@"key"], self.prompt[@"options"][i][@"value"]);
         }
     }
     

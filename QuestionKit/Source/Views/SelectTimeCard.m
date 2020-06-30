@@ -16,7 +16,7 @@
 
 @implementation SelectTimeCard
 
-- (id) initWithPrompt:(NSDictionary *) prompt textField:(UITextField *) textField changeAction:(void (^)(NSString * key, id value)) changeAction {
+- (id) initWithPrompt:(NSDictionary *) prompt textField:(UITextField *) textField changeAction:(void (^)(NSString * key, id value)) changeAction { //!OCLINT
     if (self = [super initWithPrompt:prompt textField:textField changeAction:changeAction]) {
         UIDatePicker * picker = [[UIDatePicker alloc] init];
         picker.datePickerMode = UIDatePickerModeTime;
