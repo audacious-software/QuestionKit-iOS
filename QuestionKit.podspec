@@ -136,6 +136,6 @@ Pod::Spec.new do |spec|
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
   spec.dependency "BEMCheckBox", "~> 1.4.1"
-  spec.dependency "FSCalendar", "~> 2.8.0"
+  spec.dependency "FSCalendar", "~> 2.8.1"
 end
 

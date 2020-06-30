@@ -1,0 +1,20 @@
+PODS:
+  - BEMCheckBox (1.4.1)
+  - FSCalendar (2.8.1)
+
+DEPENDENCIES:
+  - BEMCheckBox (~> 1.4.1)
+  - FSCalendar (~> 2.8.1)
+
+SPEC REPOS:
+  trunk:
+    - BEMCheckBox
+    - FSCalendar
+
+SPEC CHECKSUMS:
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
+
+PODFILE CHECKSUM: 6c8c017793f752f8b8be65e296a03404b7784178
+
+COCOAPODS: 1.9.2
