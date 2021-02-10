@@ -24,6 +24,7 @@ FOUNDATION_EXPORT const unsigned char QuestionKit_SharedVersionString[];
 #import "PromptView.h"
 #import "SelectOneCardView.h"
 
+/*
 #import "BEMCheckBox.h"
 #import "BEMCheckBoxGroup.h"
 #import "BEMAnimationManager.h"
@@ -40,6 +41,7 @@ FOUNDATION_EXPORT const unsigned char QuestionKit_SharedVersionString[];
 #import "FSCalendarDelegationFactory.h"
 #import "FSCalendarDelegationProxy.h"
 #import "FSCalendarStickyHeader.h"
+*/
 
 #endif /* QuestionKit_Shared_h */
 

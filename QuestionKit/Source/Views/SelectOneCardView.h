@@ -7,8 +7,9 @@
 //
 
 @import UIKit;
+@import BEMCheckBox;
 
-#import "BEMCheckBox.h"
+// #import "BEMCheckBox.h"
 
 #import "PromptView.h"
 

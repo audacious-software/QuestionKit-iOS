@@ -6,9 +6,8 @@
 //  Copyright © 2018 CACHET. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-#import "BEMCheckBox.h"
+@import UIKit;
+@import BEMCheckBox;
 
 #import "PromptView.h"
 
