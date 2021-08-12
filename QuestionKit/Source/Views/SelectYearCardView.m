@@ -21,7 +21,7 @@
                                                                                  target:self
                                                                                  action:nil];
         
-        UIBarButtonItem * done = [[UIBarButtonItem alloc] initWithTitle:[self localizedStringForKey:@"action_done_keyboard"]
+        UIBarButtonItem * done = [[UIBarButtonItem alloc] initWithTitle:[self localizedStringForKey:@"action_hide_keyboard"]
                                                                   style:UIBarButtonItemStyleDone
                                                                  target:self
                                                                  action:@selector(textDone)];
