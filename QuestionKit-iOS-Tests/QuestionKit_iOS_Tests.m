@@ -1,18 +1,18 @@
 //
-//  QuestionKitTests.m
-//  QuestionKitTests
+//  QuestionKit_iOS_Tests.m
+//  QuestionKit-iOS-Tests
 //
-//  Created by Chris Karr on 12/7/18.
-//  Copyright © 2018 Audacious Software. All rights reserved.
+//  Created by Chris Karr on 8/12/21.
+//  Copyright © 2021 Audacious Software. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface QuestionKitTests : XCTestCase
+@interface QuestionKit_iOS_Tests : XCTestCase
 
 @end
 
-@implementation QuestionKitTests
+@implementation QuestionKit_iOS_Tests
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.

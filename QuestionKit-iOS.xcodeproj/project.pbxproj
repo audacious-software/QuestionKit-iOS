@@ -3,19 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3084382340321868727C964D /* Pods_QuestionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE63DA240784361B9A8E68A9 /* Pods_QuestionKit.framework */; };
+		2EEC8339E1A8B5B5A951A0F4 /* Pods_QuestionKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34B16E3415F563689CE74B4 /* Pods_QuestionKit_iOS.framework */; };
 		3805CBFC234D63DA0049A996 /* QuestionKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3805CBFE234D63DA0049A996 /* QuestionKit.strings */; };
+		380D3EE726C6122B009A1776 /* QuestionKit_iOS_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 380D3EE626C6122B009A1776 /* QuestionKit_iOS_UITests.m */; };
+		380D3EF326C61236009A1776 /* QuestionKit_iOS_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 380D3EF226C61236009A1776 /* QuestionKit_iOS_Tests.m */; };
+		380D3EF526C61236009A1776 /* QuestionKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388224D521BAE2830054A314 /* QuestionKit_iOS.framework */; };
+		380D3F0326C61243009A1776 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 380D3F0226C61243009A1776 /* AppDelegate.m */; };
+		380D3F0626C61243009A1776 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 380D3F0526C61243009A1776 /* SceneDelegate.m */; };
+		380D3F0926C61243009A1776 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380D3F0826C61243009A1776 /* ViewController.m */; };
+		380D3F0C26C61243009A1776 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380D3F0A26C61243009A1776 /* Main.storyboard */; };
+		380D3F0E26C61247009A1776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380D3F0D26C61247009A1776 /* Assets.xcassets */; };
+		380D3F1126C61247009A1776 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380D3F0F26C61247009A1776 /* LaunchScreen.storyboard */; };
+		380D3F1426C61247009A1776 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 380D3F1326C61247009A1776 /* main.m */; };
 		38168F5B22791B3F004B7EA5 /* ReadOnlyTextCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 38168F5922791B3F004B7EA5 /* ReadOnlyTextCard.h */; };
 		38168F5C22791B3F004B7EA5 /* ReadOnlyTextCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 38168F5A22791B3F004B7EA5 /* ReadOnlyTextCard.m */; };
 		382E0E0E23A406A4007AF288 /* QuestionKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 382E0E0D23A406A4007AF288 /* QuestionKit.podspec */; };
 		383E2C3223477DB000D7A5D6 /* SelectYearCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 383E2C3023477DB000D7A5D6 /* SelectYearCardView.m */; };
 		383E2C3323477DB000D7A5D6 /* SelectYearCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 383E2C3123477DB000D7A5D6 /* SelectYearCardView.h */; };
-		388224DF21BAE2840054A314 /* QuestionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388224D521BAE2830054A314 /* QuestionKit.framework */; };
-		388224E421BAE2840054A314 /* QuestionKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 388224E321BAE2840054A314 /* QuestionKitTests.m */; };
 		388224E621BAE2840054A314 /* QuestionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 388224D821BAE2830054A314 /* QuestionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882250A21BAE70B0054A314 /* DateRangePickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3882250621BAE70B0054A314 /* DateRangePickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3882250B21BAE70B0054A314 /* DateRangePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3882250721BAE70B0054A314 /* DateRangePickerViewController.m */; };
@@ -37,34 +45,67 @@
 		38BE6BE52382208C006CACA0 /* SelectTimeCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE6BE32382208C006CACA0 /* SelectTimeCard.m */; };
 		38BE6BF523858CEC006CACA0 /* ReadOnlyLocationCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BE6BF323858CEC006CACA0 /* ReadOnlyLocationCard.h */; };
 		38BE6BF623858CEC006CACA0 /* ReadOnlyLocationCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE6BF423858CEC006CACA0 /* ReadOnlyLocationCard.m */; };
-		D68A1E1692DA4EB73A9CDC1A /* Pods_QuestionKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358270A61F021D079C0FBA2D /* Pods_QuestionKitTests.framework */; };
+		4B67F2617851840F36FE4572 /* Pods_QuestionKit_iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DF648E7DED6ACE9E0016A8 /* Pods_QuestionKit_iOS_Tests.framework */; };
+		CAFBF1E405C1C57D0C647D6E /* Pods_QuestionKit_iOS_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4798DC7A4B4439E6786D8C2B /* Pods_QuestionKit_iOS_UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		388224E021BAE2840054A314 /* PBXContainerItemProxy */ = {
+		380D3EF626C61236009A1776 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 388224CC21BAE2830054A314 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 388224D421BAE2830054A314;
-			remoteInfo = QuestionKit;
+			remoteInfo = "QuestionKit-iOS";
+		};
+		380D3F1826C6124C009A1776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 388224CC21BAE2830054A314 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 380D3EFE26C61243009A1776;
+			remoteInfo = "Test Dummy App";
+		};
+		380D3F1A26C6124F009A1776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 388224CC21BAE2830054A314 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 380D3EFE26C61243009A1776;
+			remoteInfo = "Test Dummy App";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		148AA5163B4A02576AC9215D /* Pods-QuestionKit-iOS-UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit-iOS-UITests.release.xcconfig"; path = "Target Support Files/Pods-QuestionKit-iOS-UITests/Pods-QuestionKit-iOS-UITests.release.xcconfig"; sourceTree = "<group>"; };
+		2246505FF715631205244803 /* Pods-QuestionKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit-iOS.release.xcconfig"; path = "Target Support Files/Pods-QuestionKit-iOS/Pods-QuestionKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		2DD4B4EE454003CDF10ACC2C /* Pods-QuestionKit-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit-iOS.debug.xcconfig"; path = "Target Support Files/Pods-QuestionKit-iOS/Pods-QuestionKit-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		358270A61F021D079C0FBA2D /* Pods_QuestionKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3805CBFD234D63DA0049A996 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/QuestionKit.strings; sourceTree = "<group>"; };
 		3805CBFF234D64A70049A996 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/QuestionKit.strings; sourceTree = "<group>"; };
+		380D3EE426C6122B009A1776 /* QuestionKit-iOS-UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QuestionKit-iOS-UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		380D3EE626C6122B009A1776 /* QuestionKit_iOS_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionKit_iOS_UITests.m; sourceTree = "<group>"; };
+		380D3EE826C6122B009A1776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		380D3EF026C61236009A1776 /* QuestionKit-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QuestionKit-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		380D3EF226C61236009A1776 /* QuestionKit_iOS_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionKit_iOS_Tests.m; sourceTree = "<group>"; };
+		380D3EF426C61236009A1776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		380D3EFF26C61243009A1776 /* Test Dummy App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test Dummy App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		380D3F0126C61243009A1776 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		380D3F0226C61243009A1776 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		380D3F0426C61243009A1776 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		380D3F0526C61243009A1776 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		380D3F0726C61243009A1776 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		380D3F0826C61243009A1776 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		380D3F0B26C61243009A1776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		380D3F0D26C61247009A1776 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		380D3F1026C61247009A1776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		380D3F1226C61247009A1776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		380D3F1326C61247009A1776 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		38168F5922791B3F004B7EA5 /* ReadOnlyTextCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ReadOnlyTextCard.h; path = Source/Views/ReadOnlyTextCard.h; sourceTree = "<group>"; };
 		38168F5A22791B3F004B7EA5 /* ReadOnlyTextCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ReadOnlyTextCard.m; path = Source/Views/ReadOnlyTextCard.m; sourceTree = "<group>"; };
-		382E0E0D23A406A4007AF288 /* QuestionKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuestionKit.podspec; sourceTree = SOURCE_ROOT; };
+		382E0E0D23A406A4007AF288 /* QuestionKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = QuestionKit.podspec; sourceTree = SOURCE_ROOT; };
 		383E2C3023477DB000D7A5D6 /* SelectYearCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectYearCardView.m; path = Source/Views/SelectYearCardView.m; sourceTree = "<group>"; };
 		383E2C3123477DB000D7A5D6 /* SelectYearCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectYearCardView.h; path = Source/Views/SelectYearCardView.h; sourceTree = "<group>"; };
-		388224D521BAE2830054A314 /* QuestionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuestionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		388224D521BAE2830054A314 /* QuestionKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuestionKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		388224D821BAE2830054A314 /* QuestionKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionKit.h; sourceTree = "<group>"; };
 		388224D921BAE2830054A314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		388224DE21BAE2840054A314 /* QuestionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		388224E321BAE2840054A314 /* QuestionKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionKitTests.m; sourceTree = "<group>"; };
-		388224E521BAE2840054A314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		388224FC21BAE64A0054A314 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		388224FE21BAE6600054A314 /* .oclint */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .oclint; sourceTree = SOURCE_ROOT; };
 		3882250021BAE66B0054A314 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = SOURCE_ROOT; };
@@ -90,39 +131,97 @@
 		38BE6BE32382208C006CACA0 /* SelectTimeCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SelectTimeCard.m; path = Source/Views/SelectTimeCard.m; sourceTree = "<group>"; };
 		38BE6BF323858CEC006CACA0 /* ReadOnlyLocationCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ReadOnlyLocationCard.h; path = Source/Views/ReadOnlyLocationCard.h; sourceTree = "<group>"; };
 		38BE6BF423858CEC006CACA0 /* ReadOnlyLocationCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ReadOnlyLocationCard.m; path = Source/Views/ReadOnlyLocationCard.m; sourceTree = "<group>"; };
+		40DF648E7DED6ACE9E0016A8 /* Pods_QuestionKit_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionKit_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4798DC7A4B4439E6786D8C2B /* Pods_QuestionKit_iOS_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionKit_iOS_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56B9FB09605AF6D49083CE1A /* Pods-QuestionKit-iOS-UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit-iOS-UITests.debug.xcconfig"; path = "Target Support Files/Pods-QuestionKit-iOS-UITests/Pods-QuestionKit-iOS-UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9681996C32D0E84D536DD743 /* Pods-QuestionKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit.debug.xcconfig"; path = "Target Support Files/Pods-QuestionKit/Pods-QuestionKit.debug.xcconfig"; sourceTree = "<group>"; };
-		BE63DA240784361B9A8E68A9 /* Pods_QuestionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BB54D4491EDFE602CA9E4BC /* Pods-QuestionKit-iOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit-iOS-Tests.release.xcconfig"; path = "Target Support Files/Pods-QuestionKit-iOS-Tests/Pods-QuestionKit-iOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AB0E674DD281E454F226FB41 /* Pods-QuestionKit-iOS-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit-iOS-Tests.debug.xcconfig"; path = "Target Support Files/Pods-QuestionKit-iOS-Tests/Pods-QuestionKit-iOS-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8D77B713B20FA4DDF202F63 /* Pods-QuestionKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit.release.xcconfig"; path = "Target Support Files/Pods-QuestionKit/Pods-QuestionKit.release.xcconfig"; sourceTree = "<group>"; };
+		D34B16E3415F563689CE74B4 /* Pods_QuestionKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDA175069D9B016B7AE324A /* Pods-QuestionKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKitTests.release.xcconfig"; path = "Target Support Files/Pods-QuestionKitTests/Pods-QuestionKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		ECF62E540DE11477CAE7143A /* Pods-QuestionKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKitTests.debug.xcconfig"; path = "Target Support Files/Pods-QuestionKitTests/Pods-QuestionKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		380D3EE126C6122B009A1776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAFBF1E405C1C57D0C647D6E /* Pods_QuestionKit_iOS_UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		380D3EED26C61236009A1776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				380D3EF526C61236009A1776 /* QuestionKit_iOS.framework in Frameworks */,
+				4B67F2617851840F36FE4572 /* Pods_QuestionKit_iOS_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		380D3EFC26C61243009A1776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		388224D221BAE2830054A314 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3084382340321868727C964D /* Pods_QuestionKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		388224DB21BAE2840054A314 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				388224DF21BAE2840054A314 /* QuestionKit.framework in Frameworks */,
-				D68A1E1692DA4EB73A9CDC1A /* Pods_QuestionKitTests.framework in Frameworks */,
+				2EEC8339E1A8B5B5A951A0F4 /* Pods_QuestionKit_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		380D3EE526C6122B009A1776 /* QuestionKit-iOS-UITests */ = {
+			isa = PBXGroup;
+			children = (
+				380D3EE626C6122B009A1776 /* QuestionKit_iOS_UITests.m */,
+				380D3EE826C6122B009A1776 /* Info.plist */,
+			);
+			path = "QuestionKit-iOS-UITests";
+			sourceTree = "<group>";
+		};
+		380D3EF126C61236009A1776 /* QuestionKit-iOS-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				380D3EF226C61236009A1776 /* QuestionKit_iOS_Tests.m */,
+				380D3EF426C61236009A1776 /* Info.plist */,
+			);
+			path = "QuestionKit-iOS-Tests";
+			sourceTree = "<group>";
+		};
+		380D3F0026C61243009A1776 /* Test Dummy App */ = {
+			isa = PBXGroup;
+			children = (
+				380D3F0126C61243009A1776 /* AppDelegate.h */,
+				380D3F0226C61243009A1776 /* AppDelegate.m */,
+				380D3F0426C61243009A1776 /* SceneDelegate.h */,
+				380D3F0526C61243009A1776 /* SceneDelegate.m */,
+				380D3F0726C61243009A1776 /* ViewController.h */,
+				380D3F0826C61243009A1776 /* ViewController.m */,
+				380D3F0A26C61243009A1776 /* Main.storyboard */,
+				380D3F0D26C61247009A1776 /* Assets.xcassets */,
+				380D3F0F26C61247009A1776 /* LaunchScreen.storyboard */,
+				380D3F1226C61247009A1776 /* Info.plist */,
+				380D3F1326C61247009A1776 /* main.m */,
+			);
+			path = "Test Dummy App";
+			sourceTree = "<group>";
+		};
 		388224CB21BAE2830054A314 = {
 			isa = PBXGroup;
 			children = (
 				388224D721BAE2830054A314 /* QuestionKit */,
-				388224E221BAE2840054A314 /* QuestionKitTests */,
+				380D3EE526C6122B009A1776 /* QuestionKit-iOS-UITests */,
+				380D3EF126C61236009A1776 /* QuestionKit-iOS-Tests */,
+				380D3F0026C61243009A1776 /* Test Dummy App */,
 				388224D621BAE2830054A314 /* Products */,
 				918A6850B81BCB7F61461862 /* Pods */,
 				4F62302C7F53D9B4AD993342 /* Frameworks */,
@@ -132,8 +231,10 @@
 		388224D621BAE2830054A314 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				388224D521BAE2830054A314 /* QuestionKit.framework */,
-				388224DE21BAE2840054A314 /* QuestionKitTests.xctest */,
+				388224D521BAE2830054A314 /* QuestionKit_iOS.framework */,
+				380D3EE426C6122B009A1776 /* QuestionKit-iOS-UITests.xctest */,
+				380D3EF026C61236009A1776 /* QuestionKit-iOS-Tests.xctest */,
+				380D3EFF26C61243009A1776 /* Test Dummy App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,15 +248,6 @@
 				388224F921BAE5FB0054A314 /* Resources */,
 			);
 			path = QuestionKit;
-			sourceTree = "<group>";
-		};
-		388224E221BAE2840054A314 /* QuestionKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				388224E321BAE2840054A314 /* QuestionKitTests.m */,
-				388224E521BAE2840054A314 /* Info.plist */,
-			);
-			path = QuestionKitTests;
 			sourceTree = "<group>";
 		};
 		388224F921BAE5FB0054A314 /* Resources */ = {
@@ -246,8 +338,10 @@
 		4F62302C7F53D9B4AD993342 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BE63DA240784361B9A8E68A9 /* Pods_QuestionKit.framework */,
 				358270A61F021D079C0FBA2D /* Pods_QuestionKitTests.framework */,
+				D34B16E3415F563689CE74B4 /* Pods_QuestionKit_iOS.framework */,
+				40DF648E7DED6ACE9E0016A8 /* Pods_QuestionKit_iOS_Tests.framework */,
+				4798DC7A4B4439E6786D8C2B /* Pods_QuestionKit_iOS_UITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -259,8 +353,13 @@
 				C8D77B713B20FA4DDF202F63 /* Pods-QuestionKit.release.xcconfig */,
 				ECF62E540DE11477CAE7143A /* Pods-QuestionKitTests.debug.xcconfig */,
 				DCDA175069D9B016B7AE324A /* Pods-QuestionKitTests.release.xcconfig */,
+				2DD4B4EE454003CDF10ACC2C /* Pods-QuestionKit-iOS.debug.xcconfig */,
+				2246505FF715631205244803 /* Pods-QuestionKit-iOS.release.xcconfig */,
+				AB0E674DD281E454F226FB41 /* Pods-QuestionKit-iOS-Tests.debug.xcconfig */,
+				9BB54D4491EDFE602CA9E4BC /* Pods-QuestionKit-iOS-Tests.release.xcconfig */,
+				56B9FB09605AF6D49083CE1A /* Pods-QuestionKit-iOS-UITests.debug.xcconfig */,
+				148AA5163B4A02576AC9215D /* Pods-QuestionKit-iOS-UITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -290,9 +389,67 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		388224D421BAE2830054A314 /* QuestionKit */ = {
+		380D3EE326C6122B009A1776 /* QuestionKit-iOS-UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 388224E921BAE2840054A314 /* Build configuration list for PBXNativeTarget "QuestionKit" */;
+			buildConfigurationList = 380D3EE926C6122B009A1776 /* Build configuration list for PBXNativeTarget "QuestionKit-iOS-UITests" */;
+			buildPhases = (
+				2A4EF1332D054E8F1D97184D /* [CP] Check Pods Manifest.lock */,
+				380D3EE026C6122B009A1776 /* Sources */,
+				380D3EE126C6122B009A1776 /* Frameworks */,
+				380D3EE226C6122B009A1776 /* Resources */,
+				2F99E3052D0A15E64ECBD1B3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				380D3F1B26C6124F009A1776 /* PBXTargetDependency */,
+			);
+			name = "QuestionKit-iOS-UITests";
+			productName = "QuestionKit-iOS-UITests";
+			productReference = 380D3EE426C6122B009A1776 /* QuestionKit-iOS-UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		380D3EEF26C61236009A1776 /* QuestionKit-iOS-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 380D3EF826C61236009A1776 /* Build configuration list for PBXNativeTarget "QuestionKit-iOS-Tests" */;
+			buildPhases = (
+				EF60BC2831DD95217E1F6ADE /* [CP] Check Pods Manifest.lock */,
+				380D3EEC26C61236009A1776 /* Sources */,
+				380D3EED26C61236009A1776 /* Frameworks */,
+				380D3EEE26C61236009A1776 /* Resources */,
+				B255D0B9421F376FB8C68414 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				380D3EF726C61236009A1776 /* PBXTargetDependency */,
+				380D3F1926C6124C009A1776 /* PBXTargetDependency */,
+			);
+			name = "QuestionKit-iOS-Tests";
+			productName = "QuestionKit-iOS-Tests";
+			productReference = 380D3EF026C61236009A1776 /* QuestionKit-iOS-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		380D3EFE26C61243009A1776 /* Test Dummy App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 380D3F1526C61247009A1776 /* Build configuration list for PBXNativeTarget "Test Dummy App" */;
+			buildPhases = (
+				380D3EFB26C61243009A1776 /* Sources */,
+				380D3EFC26C61243009A1776 /* Frameworks */,
+				380D3EFD26C61243009A1776 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Test Dummy App";
+			productName = "Test Dummy App";
+			productReference = 380D3EFF26C61243009A1776 /* Test Dummy App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		388224D421BAE2830054A314 /* QuestionKit-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 388224E921BAE2840054A314 /* Build configuration list for PBXNativeTarget "QuestionKit-iOS" */;
 			buildPhases = (
 				1A88EC45D81EEDAEEBDC4293 /* [CP] Check Pods Manifest.lock */,
 				388224D021BAE2830054A314 /* Headers */,
@@ -304,30 +461,10 @@
 			);
 			dependencies = (
 			);
-			name = QuestionKit;
+			name = "QuestionKit-iOS";
 			productName = QuestionKit;
-			productReference = 388224D521BAE2830054A314 /* QuestionKit.framework */;
+			productReference = 388224D521BAE2830054A314 /* QuestionKit_iOS.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		388224DD21BAE2840054A314 /* QuestionKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 388224EC21BAE2840054A314 /* Build configuration list for PBXNativeTarget "QuestionKitTests" */;
-			buildPhases = (
-				3296157B43C8D38A240C614B /* [CP] Check Pods Manifest.lock */,
-				388224DA21BAE2840054A314 /* Sources */,
-				388224DB21BAE2840054A314 /* Frameworks */,
-				388224DC21BAE2840054A314 /* Resources */,
-				FE9EFFEBD5913D9948B89CA6 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				388224E121BAE2840054A314 /* PBXTargetDependency */,
-			);
-			name = QuestionKitTests;
-			productName = QuestionKitTests;
-			productReference = 388224DE21BAE2840054A314 /* QuestionKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -338,15 +475,23 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Audacious Software";
 				TargetAttributes = {
-					388224D421BAE2830054A314 = {
-						CreatedOnToolsVersion = 10.1;
+					380D3EE326C6122B009A1776 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 380D3EFE26C61243009A1776;
 					};
-					388224DD21BAE2840054A314 = {
+					380D3EEF26C61236009A1776 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 380D3EFE26C61243009A1776;
+					};
+					380D3EFE26C61243009A1776 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					388224D421BAE2830054A314 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 388224CF21BAE2830054A314 /* Build configuration list for PBXProject "QuestionKit" */;
+			buildConfigurationList = 388224CF21BAE2830054A314 /* Build configuration list for PBXProject "QuestionKit-iOS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -360,26 +505,45 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				388224D421BAE2830054A314 /* QuestionKit */,
-				388224DD21BAE2840054A314 /* QuestionKitTests */,
+				388224D421BAE2830054A314 /* QuestionKit-iOS */,
+				380D3EE326C6122B009A1776 /* QuestionKit-iOS-UITests */,
+				380D3EEF26C61236009A1776 /* QuestionKit-iOS-Tests */,
+				380D3EFE26C61243009A1776 /* Test Dummy App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		380D3EE226C6122B009A1776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		380D3EEE26C61236009A1776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		380D3EFD26C61243009A1776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				380D3F1126C61247009A1776 /* LaunchScreen.storyboard in Resources */,
+				380D3F0E26C61247009A1776 /* Assets.xcassets in Resources */,
+				380D3F0C26C61243009A1776 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		388224D321BAE2830054A314 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3805CBFC234D63DA0049A996 /* QuestionKit.strings in Resources */,
 				382E0E0E23A406A4007AF288 /* QuestionKit.podspec in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		388224DC21BAE2840054A314 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,14 +565,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-QuestionKit-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-QuestionKit-iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3296157B43C8D38A240C614B /* [CP] Check Pods Manifest.lock */ = {
+		2A4EF1332D054E8F1D97184D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -423,33 +587,99 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-QuestionKitTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-QuestionKit-iOS-UITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FE9EFFEBD5913D9948B89CA6 /* [CP] Embed Pods Frameworks */ = {
+		2F99E3052D0A15E64ECBD1B3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QuestionKitTests/Pods-QuestionKitTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-QuestionKit-iOS-UITests/Pods-QuestionKit-iOS-UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QuestionKitTests/Pods-QuestionKitTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-QuestionKit-iOS-UITests/Pods-QuestionKit-iOS-UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuestionKitTests/Pods-QuestionKitTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuestionKit-iOS-UITests/Pods-QuestionKit-iOS-UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B255D0B9421F376FB8C68414 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuestionKit-iOS-Tests/Pods-QuestionKit-iOS-Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuestionKit-iOS-Tests/Pods-QuestionKit-iOS-Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuestionKit-iOS-Tests/Pods-QuestionKit-iOS-Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF60BC2831DD95217E1F6ADE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuestionKit-iOS-Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		380D3EE026C6122B009A1776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				380D3EE726C6122B009A1776 /* QuestionKit_iOS_UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		380D3EEC26C61236009A1776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				380D3EF326C61236009A1776 /* QuestionKit_iOS_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		380D3EFB26C61243009A1776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				380D3F0926C61243009A1776 /* ViewController.m in Sources */,
+				380D3F0326C61243009A1776 /* AppDelegate.m in Sources */,
+				380D3F1426C61247009A1776 /* main.m in Sources */,
+				380D3F0626C61243009A1776 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		388224D121BAE2830054A314 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,21 +699,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		388224DA21BAE2840054A314 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				388224E421BAE2840054A314 /* QuestionKitTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		388224E121BAE2840054A314 /* PBXTargetDependency */ = {
+		380D3EF726C61236009A1776 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 388224D421BAE2830054A314 /* QuestionKit */;
-			targetProxy = 388224E021BAE2840054A314 /* PBXContainerItemProxy */;
+			target = 388224D421BAE2830054A314 /* QuestionKit-iOS */;
+			targetProxy = 380D3EF626C61236009A1776 /* PBXContainerItemProxy */;
+		};
+		380D3F1926C6124C009A1776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 380D3EFE26C61243009A1776 /* Test Dummy App */;
+			targetProxy = 380D3F1826C6124C009A1776 /* PBXContainerItemProxy */;
+		};
+		380D3F1B26C6124F009A1776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 380D3EFE26C61243009A1776 /* Test Dummy App */;
+			targetProxy = 380D3F1A26C6124F009A1776 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -497,9 +729,155 @@
 			name = QuestionKit.strings;
 			sourceTree = "<group>";
 		};
+		380D3F0A26C61243009A1776 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				380D3F0B26C61243009A1776 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		380D3F0F26C61247009A1776 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				380D3F1026C61247009A1776 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		380D3EEA26C6122B009A1776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56B9FB09605AF6D49083CE1A /* Pods-QuestionKit-iOS-UITests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V664K3X7J4;
+				INFOPLIST_FILE = "QuestionKit-iOS-UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.audacious-software.QuestionKit-iOS-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Test Dummy App";
+			};
+			name = Debug;
+		};
+		380D3EEB26C6122B009A1776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 148AA5163B4A02576AC9215D /* Pods-QuestionKit-iOS-UITests.release.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V664K3X7J4;
+				INFOPLIST_FILE = "QuestionKit-iOS-UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.audacious-software.QuestionKit-iOS-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Test Dummy App";
+			};
+			name = Release;
+		};
+		380D3EF926C61236009A1776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB0E674DD281E454F226FB41 /* Pods-QuestionKit-iOS-Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V664K3X7J4;
+				INFOPLIST_FILE = "QuestionKit-iOS-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.audacious-software.QuestionKit-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test Dummy App.app/Test Dummy App";
+			};
+			name = Debug;
+		};
+		380D3EFA26C61236009A1776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BB54D4491EDFE602CA9E4BC /* Pods-QuestionKit-iOS-Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V664K3X7J4;
+				INFOPLIST_FILE = "QuestionKit-iOS-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.audacious-software.QuestionKit-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test Dummy App.app/Test Dummy App";
+			};
+			name = Release;
+		};
+		380D3F1626C61247009A1776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V664K3X7J4;
+				INFOPLIST_FILE = "Test Dummy App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.audacious-software.Test-Dummy-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		380D3F1726C61247009A1776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V664K3X7J4;
+				INFOPLIST_FILE = "Test Dummy App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.audacious-software.Test-Dummy-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		388224E721BAE2840054A314 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -621,7 +999,7 @@
 		};
 		388224EA21BAE2840054A314 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9681996C32D0E84D536DD743 /* Pods-QuestionKit.debug.xcconfig */;
+			baseConfigurationReference = 2DD4B4EE454003CDF10ACC2C /* Pods-QuestionKit-iOS.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -638,6 +1016,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.audacious-software.QuestionKit";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -647,7 +1026,7 @@
 		};
 		388224EB21BAE2840054A314 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8D77B713B20FA4DDF202F63 /* Pods-QuestionKit.release.xcconfig */;
+			baseConfigurationReference = 2246505FF715631205244803 /* Pods-QuestionKit-iOS.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -664,6 +1043,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.audacious-software.QuestionKit";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -671,46 +1051,37 @@
 			};
 			name = Release;
 		};
-		388224ED21BAE2840054A314 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECF62E540DE11477CAE7143A /* Pods-QuestionKitTests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V664K3X7J4;
-				INFOPLIST_FILE = QuestionKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.audacious-software.QuestionKitTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		388224EE21BAE2840054A314 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCDA175069D9B016B7AE324A /* Pods-QuestionKitTests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V664K3X7J4;
-				INFOPLIST_FILE = QuestionKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.audacious-software.QuestionKitTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		388224CF21BAE2830054A314 /* Build configuration list for PBXProject "QuestionKit" */ = {
+		380D3EE926C6122B009A1776 /* Build configuration list for PBXNativeTarget "QuestionKit-iOS-UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				380D3EEA26C6122B009A1776 /* Debug */,
+				380D3EEB26C6122B009A1776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		380D3EF826C61236009A1776 /* Build configuration list for PBXNativeTarget "QuestionKit-iOS-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				380D3EF926C61236009A1776 /* Debug */,
+				380D3EFA26C61236009A1776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		380D3F1526C61247009A1776 /* Build configuration list for PBXNativeTarget "Test Dummy App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				380D3F1626C61247009A1776 /* Debug */,
+				380D3F1726C61247009A1776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		388224CF21BAE2830054A314 /* Build configuration list for PBXProject "QuestionKit-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				388224E721BAE2840054A314 /* Debug */,
@@ -719,20 +1090,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		388224E921BAE2840054A314 /* Build configuration list for PBXNativeTarget "QuestionKit" */ = {
+		388224E921BAE2840054A314 /* Build configuration list for PBXNativeTarget "QuestionKit-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				388224EA21BAE2840054A314 /* Debug */,
 				388224EB21BAE2840054A314 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		388224EC21BAE2840054A314 /* Build configuration list for PBXNativeTarget "QuestionKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				388224ED21BAE2840054A314 /* Debug */,
-				388224EE21BAE2840054A314 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
