@@ -77,7 +77,6 @@
 		148AA5163B4A02576AC9215D /* Pods-QuestionKit-iOS-UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit-iOS-UITests.release.xcconfig"; path = "Target Support Files/Pods-QuestionKit-iOS-UITests/Pods-QuestionKit-iOS-UITests.release.xcconfig"; sourceTree = "<group>"; };
 		2246505FF715631205244803 /* Pods-QuestionKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit-iOS.release.xcconfig"; path = "Target Support Files/Pods-QuestionKit-iOS/Pods-QuestionKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		2DD4B4EE454003CDF10ACC2C /* Pods-QuestionKit-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit-iOS.debug.xcconfig"; path = "Target Support Files/Pods-QuestionKit-iOS/Pods-QuestionKit-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		358270A61F021D079C0FBA2D /* Pods_QuestionKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3805CBFD234D63DA0049A996 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/QuestionKit.strings; sourceTree = "<group>"; };
 		3805CBFF234D64A70049A996 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/QuestionKit.strings; sourceTree = "<group>"; };
 		380D3EE426C6122B009A1776 /* QuestionKit-iOS-UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QuestionKit-iOS-UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,13 +133,9 @@
 		40DF648E7DED6ACE9E0016A8 /* Pods_QuestionKit_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionKit_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4798DC7A4B4439E6786D8C2B /* Pods_QuestionKit_iOS_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionKit_iOS_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B9FB09605AF6D49083CE1A /* Pods-QuestionKit-iOS-UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit-iOS-UITests.debug.xcconfig"; path = "Target Support Files/Pods-QuestionKit-iOS-UITests/Pods-QuestionKit-iOS-UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9681996C32D0E84D536DD743 /* Pods-QuestionKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit.debug.xcconfig"; path = "Target Support Files/Pods-QuestionKit/Pods-QuestionKit.debug.xcconfig"; sourceTree = "<group>"; };
 		9BB54D4491EDFE602CA9E4BC /* Pods-QuestionKit-iOS-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit-iOS-Tests.release.xcconfig"; path = "Target Support Files/Pods-QuestionKit-iOS-Tests/Pods-QuestionKit-iOS-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		AB0E674DD281E454F226FB41 /* Pods-QuestionKit-iOS-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit-iOS-Tests.debug.xcconfig"; path = "Target Support Files/Pods-QuestionKit-iOS-Tests/Pods-QuestionKit-iOS-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C8D77B713B20FA4DDF202F63 /* Pods-QuestionKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKit.release.xcconfig"; path = "Target Support Files/Pods-QuestionKit/Pods-QuestionKit.release.xcconfig"; sourceTree = "<group>"; };
 		D34B16E3415F563689CE74B4 /* Pods_QuestionKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCDA175069D9B016B7AE324A /* Pods-QuestionKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKitTests.release.xcconfig"; path = "Target Support Files/Pods-QuestionKitTests/Pods-QuestionKitTests.release.xcconfig"; sourceTree = "<group>"; };
-		ECF62E540DE11477CAE7143A /* Pods-QuestionKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionKitTests.debug.xcconfig"; path = "Target Support Files/Pods-QuestionKitTests/Pods-QuestionKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,7 +333,6 @@
 		4F62302C7F53D9B4AD993342 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				358270A61F021D079C0FBA2D /* Pods_QuestionKitTests.framework */,
 				D34B16E3415F563689CE74B4 /* Pods_QuestionKit_iOS.framework */,
 				40DF648E7DED6ACE9E0016A8 /* Pods_QuestionKit_iOS_Tests.framework */,
 				4798DC7A4B4439E6786D8C2B /* Pods_QuestionKit_iOS_UITests.framework */,
@@ -349,10 +343,6 @@
 		918A6850B81BCB7F61461862 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9681996C32D0E84D536DD743 /* Pods-QuestionKit.debug.xcconfig */,
-				C8D77B713B20FA4DDF202F63 /* Pods-QuestionKit.release.xcconfig */,
-				ECF62E540DE11477CAE7143A /* Pods-QuestionKitTests.debug.xcconfig */,
-				DCDA175069D9B016B7AE324A /* Pods-QuestionKitTests.release.xcconfig */,
 				2DD4B4EE454003CDF10ACC2C /* Pods-QuestionKit-iOS.debug.xcconfig */,
 				2246505FF715631205244803 /* Pods-QuestionKit-iOS.release.xcconfig */,
 				AB0E674DD281E454F226FB41 /* Pods-QuestionKit-iOS-Tests.debug.xcconfig */,
