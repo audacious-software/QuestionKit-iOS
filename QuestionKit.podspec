@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "QuestionKit"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "Framework for dynamic questionnaires and surveys."
 
   # This description is used to generate tags and improve search results.
@@ -65,7 +65,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  spec.platform     = :ios, "9.0"
+  spec.platform     = :ios, "12.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -136,6 +136,6 @@ Pod::Spec.new do |spec|
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
   spec.dependency "BEMCheckBox", "~> 1.4.1"
-  spec.dependency "FSCalendar", "~> 2.8.2"
+  spec.dependency "FSCalendar", "~> 2.8.4"
 end
 

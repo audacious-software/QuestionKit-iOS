@@ -1,8 +1,8 @@
-platform :ios, '9.0'
+platform :ios, '12.0'
 
 def required_pods
   pod 'BEMCheckBox', '~> 1.4.1'
-  pod 'FSCalendar', '~> 2.8.2'
+  pod 'FSCalendar', '~> 2.8.4'
 end
 
 target 'QuestionKit-iOS' do
