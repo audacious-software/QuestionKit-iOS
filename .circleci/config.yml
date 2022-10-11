@@ -22,11 +22,11 @@ jobs:
       - run:
           name: Build
           command: |
-            xcodebuild -workspace "QuestionKit-iOS.xcworkspace" -scheme "QuestionKit-iOS" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=14.5,name=iPhone 11" | tee xcodebuild.log | xcpretty
+            xcodebuild -workspace "QuestionKit-iOS.xcworkspace" -scheme "QuestionKit-iOS" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=16.0,name=iPhone 14" | tee xcodebuild.log | xcpretty
       - run:
           name: Test
           command: |
-            xcodebuild test -scheme "QuestionKit-iOS" -workspace "QuestionKit-iOS.xcworkspace" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=14.5,name=iPhone 11" | xcpretty
+            xcodebuild test -scheme "QuestionKit-iOS" -workspace "QuestionKit-iOS.xcworkspace" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=16.0,name=iPhone 14" | xcpretty
       - save_cache:
           key: Podfile-{{ checksum "Podfile" }}-{{ checksum "Podfile.lock" }}
           paths:
