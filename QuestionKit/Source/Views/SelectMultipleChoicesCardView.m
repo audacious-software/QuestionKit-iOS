@@ -234,8 +234,6 @@
         top += ceil(textRect.size.height);
     }
     
-    top += 10;
-    
     self.maskingView.frame = self.bounds;
     
     [self setNeedsDisplay];

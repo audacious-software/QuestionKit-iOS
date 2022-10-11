@@ -119,10 +119,6 @@
     
     self.textField.frame = textFrame;
     
-    top += textFrame.size.height;
-    
-    top += 10;
-    
     self.maskingView.frame = self.bounds;
     
     [self setNeedsDisplay];

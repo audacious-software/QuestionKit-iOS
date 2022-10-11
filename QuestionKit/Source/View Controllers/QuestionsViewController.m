@@ -51,8 +51,8 @@
         NSLog(@"ERROR: %@", error);
     } else {
         questions = [NSJSONSerialization JSONObjectWithData:data
-                                                                   options:kNilOptions
-                                                                     error:&error];
+                                                    options:kNilOptions
+                                                      error:&error];
     }
     
     if (self = [self initWithQuestions:questions]) {
@@ -139,12 +139,6 @@
     [super viewDidLayoutSubviews];
     
     self.questionsTable.frame = self.view.bounds;
-    
-    CGFloat bottomInset = 0;
-    
-    if (@available(iOS 11.0, *)) {
-        bottomInset = self.view.safeAreaInsets.bottom;
-    }
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -242,7 +236,7 @@
         if (current == nil && initialValue != nil) {
             [self.currentAnswers setValue:initialValue forKey:prompt[@"key"]];
         }
-
+        
         if ([@"select-one" isEqualToString:prompt[@"prompt-type"]]) {
             SelectOneCardView * card = self.allPromptViews[prompt[@"key"]];
             
@@ -277,26 +271,25 @@
             [self.activePromptViews addObject:card];
         } else if ([@"select-year" isEqualToString:prompt[@"prompt-type"]]) {
             SelectYearCardView * card = self.allPromptViews[prompt[@"key"]];
-
+            
             if (card == nil) {
                 UITextField * textField = nil;
-
+                
                 if (self.delegate != nil && [self.delegate respondsToSelector:@selector(newTextFieldForKey:)]) {
                     textField = [self.delegate newTextFieldForKey:prompt[@"key"]];
+                    
+                    card = [[SelectYearCardView alloc] initWithPrompt:prompt
+                                                            textField:textField
+                                                         changeAction:^(NSString * _Nonnull key, id  _Nonnull value) {
+                        [self updateValue:value forKey:key];
+                        
+                        [self reloadData];
+                    }];
                 }
-
-                card = [[SelectYearCardView alloc] initWithPrompt:prompt
-                   textField:textField
-                changeAction:^(NSString * _Nonnull key, id  _Nonnull value) {
-                    [self updateValue:value forKey:key];
-
-                    [self reloadData];
-                }];
-                
                 self.allPromptViews[prompt[@"key"]] = card;
                 
                 card.controller = self;
-
+                
                 [card initializeValue:self.currentAnswers[prompt[@"key"]]];
             }
             
@@ -313,14 +306,14 @@
                     
                     textView = views.firstObject;
                     parentView = views.lastObject;
+                    
+                    card = [[MultiLineTextCardView alloc] initWithPrompt:prompt
+                                                                textView:textView
+                                                          textParentView:parentView
+                                                            changeAction:^(NSString * key, id value) {
+                        [self updateValue:value forKey:key];
+                    }];
                 }
-                
-                card = [[MultiLineTextCardView alloc] initWithPrompt:prompt
-                                                            textView:textView
-                                                      textParentView:parentView
-                                                        changeAction:^(NSString * key, id value) {
-                    [self updateValue:value forKey:key];
-                }];
                 
                 self.allPromptViews[prompt[@"key"]] = card;
                 
@@ -336,13 +329,13 @@
                 
                 if (self.delegate != nil && [self.delegate respondsToSelector:@selector(newTextFieldForKey:)]) {
                     textField = [self.delegate newTextFieldForKey:prompt[@"key"]];
+
+                    card = [[SingleLineTextCardView alloc] initWithPrompt:prompt
+                                                                textField:textField
+                                                             changeAction:^(NSString * _Nonnull key, id  _Nonnull value) {
+                        [self updateValue:value forKey:key];
+                    }];
                 }
-                
-                card = [[SingleLineTextCardView alloc] initWithPrompt:prompt
-                                                            textField:textField
-                                                         changeAction:^(NSString * _Nonnull key, id  _Nonnull value) {
-                    [self updateValue:value forKey:key];
-                }];
                 
                 self.allPromptViews[prompt[@"key"]] = card;
                 
@@ -406,19 +399,19 @@
             [self.activePromptViews addObject:card];
         } else if ([@"select-time" isEqualToString:prompt[@"prompt-type"]]) {
             SelectTimeCard * card = self.allPromptViews[prompt[@"key"]];
-
+            
             if (card == nil) {
                 UITextField * textField = nil;
                 
                 if (self.delegate != nil && [self.delegate respondsToSelector:@selector(newTextFieldForKey:)]) {
                     textField = [self.delegate newTextFieldForKey:prompt[@"key"]];
+
+                    card = [[SelectTimeCard alloc] initWithPrompt:prompt
+                                                        textField:textField
+                                                     changeAction:^(NSString * _Nonnull key, id  _Nonnull value) {
+                        [self updateValue:value forKey:key];
+                    }];
                 }
-                
-                card = [[SelectTimeCard alloc] initWithPrompt:prompt
-                                                            textField:textField
-                                                         changeAction:^(NSString * _Nonnull key, id  _Nonnull value) {
-                    [self updateValue:value forKey:key];
-                }];
                 
                 self.allPromptViews[prompt[@"key"]] = card;
                 
@@ -567,7 +560,7 @@
             }
         }
     }
-
+    
     return completed;
 }
 
@@ -661,7 +654,7 @@
                         }
                     }
                 }
-
+                
                 if (matchesAny && matches) {
                     matchesOnce = YES;
                 }
@@ -718,7 +711,7 @@
             } else {
                 for (NSString * language in [NSLocale preferredLanguages]) {
                     NSString * shortLanguage = [language substringWithRange:NSMakeRange(0, 2)];
-
+                    
                     if (questions[@"name"][shortLanguage] != nil) {
                         self.navigationItem.title = questions[@"name"][shortLanguage];
                         
@@ -742,7 +735,7 @@
 
 - (void) didCompleteQuestionsWithAnswers:(NSDictionary *) answers {
     NSString * close = NSLocalizedStringFromTableInBundle(@"button_close", @"QuestionKit", [NSBundle bundleForClass:self.class], nil);
-
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:close
                                                                               style:UIBarButtonItemStylePlain
                                                                              target:self

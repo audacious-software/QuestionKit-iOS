@@ -173,10 +173,6 @@
     CGFloat top = mapHeight + 20;
     
     self.promptLabel.frame = CGRectMake(10, top, textRect.size.width, ceil(textRect.size.height));
-    
-    top += ceil(textRect.size.height);
-    
-    top += 10;
         
     self.maskingView.frame = self.bounds;
     
